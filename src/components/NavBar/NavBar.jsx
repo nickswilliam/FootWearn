@@ -1,4 +1,16 @@
-import { useState } from "react";
+import React, { useCallback, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
+import {
+  FaPhone,
+  FaPhotoVideo,
+  FaQuestion,
+  FaSortDown,
+  FaStore,
+  FaUser,
+} from "react-icons/fa";
+import { toggleHiddenMenu } from "../../redux/user/userSlice";
+import ModalUser from "./ModalUser/ModalUser";
 import {
   LiMenu,
   MenuItem,
@@ -8,19 +20,44 @@ import {
   Navbar,
   StyledNavLink,
 } from "./NavBarStyles";
-import {
-  FaPhone,
-  FaPhotoVideo,
-  FaQuestion,
-  FaSortDown,
-  FaStore,
-  FaUser,
-} from "react-icons/fa";
-import { useDispatch, useSelector } from "react-redux";
-import { toggleCartMenu } from "../../redux/cartSlice/cartSice";
-import { toggleHiddenMenu } from "../../redux/user/userSlice";
-import { useNavigate } from "react-router-dom";
-import ModalUser from "./ModalUser/ModalUser";
+
+const MenuSection = ({ toggleSection }) => (
+  <LiMenu className={toggleSection ? "openedSection" : "closedSection"}>
+    <MenuItem>
+      <MenuItemText to="/#hero">
+        <FaPhotoVideo />
+        Galeria
+      </MenuItemText>
+    </MenuItem>
+    <MenuItem>
+      <MenuItemText to="/#products">
+        <FaStore />
+        Productos
+      </MenuItemText>
+    </MenuItem>
+    <MenuItem>
+      <MenuItemText to="/#about">
+        <FaQuestion />
+        Acerca
+      </MenuItemText>
+    </MenuItem>
+    <MenuItem>
+      <MenuItemText to="/#contact">
+        <FaPhone />
+        Contacto
+      </MenuItemText>
+    </MenuItem>
+  </LiMenu>
+);
+
+const UserLink = ({ currentUser, dispatch }) => (
+  <StyledNavLink activeClassName="active" to={currentUser ? '/' : '/register'}>
+    <FaUser />
+      {currentUser
+        ? `${currentUser.name.charAt(0) + currentUser.lastname.charAt(0)}`
+        : "Registro"}
+  </StyledNavLink>
+);
 
 const NavBar = () => {
   const cartMenu = useSelector((state) => state.cart);
@@ -29,8 +66,16 @@ const NavBar = () => {
   const [toggleSection, setToggleSection] = useState(false);
   const navigate = useNavigate();
 
-  const handleSection = () => {
-    setToggleSection(!toggleSection);
+  const handleSection = useCallback(() => {
+    setToggleSection((prev) => !prev);
+  }, []);
+
+  const handleMenuClick = () => {
+    if (currentUser) {
+      dispatch(toggleHiddenMenu());
+    } else {
+      navigate('/register');
+    }
   };
 
   return (
@@ -44,53 +89,15 @@ const NavBar = () => {
         <NavLi onClick={handleSection}>
           Secciones
           <FaSortDown className={!toggleSection ? "normal" : "rotateUp"} />
-          {toggleSection && (
-            <LiMenu
-              className={toggleSection ? "openedSection" : "closedSection"}
-            >
-              <MenuItem>
-                <MenuItemText to="/#hero">
-                  <FaPhotoVideo />
-                  Galeria
-                </MenuItemText>
-              </MenuItem>
-              <MenuItem>
-                <MenuItemText to="/#products">
-                  <FaStore />
-                  Productos
-                </MenuItemText>
-              </MenuItem>
-              <MenuItem>
-                <MenuItemText to="/#about">
-                  <FaQuestion />
-                  Acerca
-                </MenuItemText>
-              </MenuItem>
-              <MenuItem>
-                <MenuItemText to="/#contact">
-                  <FaPhone />
-                  Contacto
-                </MenuItemText>
-              </MenuItem>
-            </LiMenu>
-          )}
+          {toggleSection && <MenuSection toggleSection={toggleSection} />}
         </NavLi>
-        <NavLi onClick={()=>currentUser ? dispatch(toggleHiddenMenu()) : navigate('/register')}>
+        <NavLi onClick={handleMenuClick}>
           <ModalUser />
-          <StyledNavLink
-            activeClassName="active"
-            to={currentUser? dispatch(toggleHiddenMenu()): '/register'}
-          >
-            <FaUser />
-            {currentUser
-              ? `${
-                  currentUser.name.charAt(0).toUpperCase() + currentUser.lastname.charAt(0).toUpperCase()
-                }`
-              : "Registro"}
-          </StyledNavLink>
+          <UserLink currentUser={currentUser} dispatch={dispatch} />
         </NavLi>
       </NavUl>
     </Navbar>
   );
 };
+
 export default NavBar;

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import { HeaderContainer } from "../Header/HeaderStyles";
 import { LayoutContainer } from "./LayoutStyles";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
