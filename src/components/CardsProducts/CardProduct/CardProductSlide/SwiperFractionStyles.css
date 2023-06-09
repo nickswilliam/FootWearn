@@ -1,0 +1,13 @@
+.swiper-pagination-fraction{
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    width: 50px;
+    height: 20px;
+    color: var(--white);
+    font-weight: 600;
+    z-index: 1;
+    border-radius: 5px;
+    background-color: var(--shadows);
+    transform: scale(0.8);
+}
