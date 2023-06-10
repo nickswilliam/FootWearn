@@ -24,11 +24,55 @@ export const ImgLogo = styled.img`
         padding: 5px 10px;
         cursor: pointer;
 `
+export const NavWrapper = styled.div`
+    order: 4;
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+    gap: 15px;
+    position: relative;
+`
 
 export const BtnTransparent = styled.button`
     border: none;
     outline: none;
     background-color: transparent;
+`
+
+export const ToggleMenuBtn = styled(BtnTransparent)`
+    display: none;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        opacity: .8;
+        transition: all ease-in .3s;
+    }
+
+    &::before{
+        content: '';
+        position: absolute;
+        
+        top: 30px;
+        left: auto;
+        right: auto;
+        width: 30px;
+        height: 2px;
+        transform-origin: left;
+        background-color: var(--black);
+        transform: scaleX(0);
+        transition: all ease .2s;
+    }
+
+    &:hover::before{
+        transform: scaleX(1);
+        transition: all ease-in .15s;
+    }
+
+    @media (max-width: 967px){
+        order: 3;
+        display: block;
+    }
+
 `
 
 export const UserNavLink = styled(NavLink)`
@@ -67,7 +111,6 @@ export const ButtonCart = styled(ButtonTransparent)`
     &::before{
         content: '';
         position: absolute;
-        
         bottom: 10px;
         left: auto;
         right: auto;

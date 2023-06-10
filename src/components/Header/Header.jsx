@@ -6,7 +6,8 @@ import {
   Overlay,
   UserNavLink,
   ImgLogo,
-  BtnTransparent,
+  ToggleMenuBtn,
+  NavWrapper,
 } from "./HeaderStyles";
 import Logo from "../../assets/imgs/logo/logo.png";
 import SearchBar from "../UI/SearchBar";
@@ -41,21 +42,20 @@ const Header = () => {
 
       <SearchBar />
 
-      {toggleMenu && (
-        <BtnTransparent>
+      <NavWrapper>
+        <ToggleMenuBtn onClick={() => setToggleMenu(!toggleMenu)}>
           <FaBars size="25px" pointerEvents="none" />
-        </BtnTransparent>
-      )}
-      
-      <NavBar />
+        </ToggleMenuBtn>
 
-      <ButtonCart onClick={handleCart} title={cartMenu && "Abrir carrito"}>
-        <CartBubble>{totalCartItemsQuantity}</CartBubble>
-        <Cart />
-      </ButtonCart>
+        
 
+        <ButtonCart onClick={handleCart} title={cartMenu && "Abrir carrito"}>
+          <CartBubble>{totalCartItemsQuantity}</CartBubble>
+          <Cart />
+        </ButtonCart>
+      </NavWrapper>
+      <NavBar toggleMenu={toggleMenu} />
       <CartMenu />
-
       {cartMenu && <Overlay onClick={handleCart} />}
     </HeaderContainer>
   );

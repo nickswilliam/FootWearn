@@ -32,6 +32,7 @@ export const SearchBarForm = styled.form`
       border: 1px solid var(--grey-light);
     }
   }
+
 `;
 
 export const SearchInput = styled.input`

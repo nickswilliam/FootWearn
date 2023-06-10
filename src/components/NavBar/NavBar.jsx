@@ -54,12 +54,15 @@ const UserLink = ({ currentUser, dispatch }) => (
   <StyledNavLink activeClassName="active" to={currentUser ? "/" : "/register"}>
     <FaUser />
     {currentUser
-      ? `${currentUser.name.toUpperCase().charAt(0) + currentUser.lastname.toUpperCase().charAt(0)}`
+      ? `${
+          currentUser.name.toUpperCase().charAt(0) +
+          currentUser.lastname.toUpperCase().charAt(0)
+        }`
       : "Registro"}
   </StyledNavLink>
 );
 
-const NavBar = () => {
+const NavBar = ({ toggleMenu }) => {
   const { cartMenu, hiddenMenu } = useSelector((state) => state.cart);
   const currentUser = useSelector((state) => state.user.currentUser);
   const dispatch = useDispatch();
@@ -71,7 +74,7 @@ const NavBar = () => {
   }, []);
 
   const handleMenuClick = () => {
-  if (currentUser) {
+    if (currentUser) {
       dispatch(toggleHiddenMenu());
     } else {
       navigate("/register");
@@ -79,7 +82,7 @@ const NavBar = () => {
   };
 
   return (
-    <Navbar>
+    <Navbar toggleMenu={toggleMenu}>
       <NavUl>
         <NavLi>
           <StyledNavLink activeClassName="active" to="/">
