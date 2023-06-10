@@ -24,6 +24,7 @@ import { clearCart, toggleCartMenu } from "../../redux/cartSlice/cartSice";
 import { ButtonTransparent } from "../../components/UI/UIStyles";
 import { useNavigate } from "react-router-dom";
 import { orderStart, orderSuccess } from "../../redux/ordersSlice/ordersSlice";
+import { CartBtnConfirm } from "../../components/NavBar/CartMenu/CartMenuStyles";
 
 const Checkout = () => {
   const checkoutRef = useRef();
@@ -80,9 +81,7 @@ const Checkout = () => {
   useEffect(() => {
     document.title = "Confirmar compra";
     checkoutRef.current.scrollIntoView();
-    if(cartMenu){
-      dispatch(toggleCartMenu())
-    }
+    
   });
   return (
     <CheckoutContainBG>
@@ -158,13 +157,14 @@ const Checkout = () => {
           <RightTitleText>TU PEDIDO ACTUAL: </RightTitleText>
           <RightContainer>
             {!cartItems.length ? null : (
-              <ButtonTransparent
-                style={{ margin: "20px 20px 0 0", alignSelf: "flex-end" }}
+              <CartBtnConfirm
+                style={{ alignSelf: "center", width: '95%'}}
                 onClick={clearItemsToCart}
                 title="Vaciar carrito"
               >
-                <FaTrash pointerEvents="none" color="var(--red)" size="22px" />
-              </ButtonTransparent>
+                <FaTrash pointerEvents="none" color="var(--black)" size="22px" />
+                Vaciar carrito
+              </CartBtnConfirm>
             )}
             <ItemsCartContainer>
               {!cartItems.length ? (

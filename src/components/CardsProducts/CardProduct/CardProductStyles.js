@@ -1,3 +1,4 @@
+import Select from "react-select";
 import { styled } from "styled-components";
 
 export const CardProductContainer = styled.div`
@@ -72,4 +73,8 @@ export const BtnAddToCart = styled.button = styled.button`
       transition: all ease-in .15s;
       background-color: #2effa1;
     }
+`
+
+export const SelectStyled = styled(Select)`
+  z-index: 2;
 `

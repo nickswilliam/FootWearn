@@ -9,13 +9,13 @@ import { toggleHiddenMenu } from "../../redux/user/userSlice";
 const Layout = ({ children }) => {
   const dispatch = useDispatch();
   const hiddenMenu = useSelector((state) => state.user.hiddenMenu);
-  const { pathname } = useLocation();
+ 
   useEffect(() => {
     if (!hiddenMenu) {
       dispatch(toggleHiddenMenu());
     }
-    window.scrollTo(0, 0);
-  }, [pathname]);
+   
+  }, []);
   return (
     <LayoutContainer>
       <Header />

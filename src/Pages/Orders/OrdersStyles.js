@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import OrderBG from "../../assets/imgs/orders/bg-img.png";
+import OrderBG from "../../assets/imgs/orders/bg-img.jpg";
 
 export const OrderBGContainer = styled.div`
   background-image: url("${OrderBG}");
@@ -7,6 +7,8 @@ export const OrderBGContainer = styled.div`
   background-repeat: no-repeat;
   width: 100%;
   margin-top: 80px;
+  height: 100vh;
+  min-height: 700px;
   display: flex;
   justify-content: center;
 `;
@@ -34,20 +36,20 @@ export const LeftContainer = styled.div`
 
   button{
     outline: none;
-    border: 1px solid var(--soft-black);
+    border: 1px solid var(--black);
     border-radius: 5px;
     padding: 10px 20px;
     width: 50%;
     font-size: 20px;
     font-weight: 600;
     color: var(--white);
-    background-color: var(--grey-dark);
+    background-color: var(--black);
     text-align: center;
     cursor: pointer;
     transition: all ease .2s;
 
     &:hover{
-      background-color: var(--grey-light);
+      background-color: var(--soft-black);
       color: var(--grey-dark);
     }
   }
@@ -66,7 +68,7 @@ export const OrdersLists = styled.div`
   background-color: var(--white-menus);
   padding: 20px;
   gap: 20px;
-  box-shadow: -8px 8px 10px var(--shadows);
+  box-shadow: -8px 8px 10px var(--shadows), 8px 8px 10px var(--shadows);
   min-width: 400px;
   max-width: 700px;
   width: 100%;

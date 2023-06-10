@@ -104,11 +104,36 @@ export const OrderItemCardContainer = styled.div`
     box-shadow: -4px 4px 6px var(--shadows), 4px 4px 6px var(--shadows)
     ;
 
+    
+    
+`
+export const LeftCardOrderContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+
     h3{
         color: var(--orange);
     }
-    
+
+    img{
+      width: 30px;
+      height: 30px;
+      border-radius: 4px;
+      padding: 1px;
+      border: 1px solid var(--grey-dark);
+    }
 `
+
+export const LeftBottomContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+`
+
 export const OrderItemMid = styled.div`
     display: flex;
     flex-direction: column;

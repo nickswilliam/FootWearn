@@ -55,22 +55,41 @@ export const UserNavLink = styled(NavLink)`
 export const ButtonCart = styled(ButtonTransparent)`
     text-align: center;
     padding: 15px 18px;
-    border-radius: 50%;
     opacity: 1;
     transition: all ease-out .35s;
     position: relative;
 
     &:hover{
-        background-color: var(--light-orange);
         opacity: .8;
         transition: all ease-in .3s;
     }
+
+    &::before{
+        content: '';
+        position: absolute;
+        
+        bottom: 10px;
+        left: auto;
+        right: auto;
+        width: 50%;
+        height: 2px;
+        transform-origin: left;
+        background-color: var(--black);
+        transform: scaleX(0);
+        transition: all ease .2s;
+    }
+
+    &:hover::before{
+        transform: scaleX(1);
+        transition: all ease-in .15s;
+    }
+    
 `
 
 export const Cart = styled(FaCartPlus)`
     text-align: center;
     font-size: 24px;
-    color: var(--orange);
+    color: var(--black);
     font-weight: 600;
 `
 export const Overlay = styled.div`

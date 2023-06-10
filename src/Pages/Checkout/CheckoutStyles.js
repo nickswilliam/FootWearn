@@ -1,24 +1,22 @@
 import {
-  FaArrowCircleRight,
   FaCircleNotch,
-  FaDashcube,
-  FaDotCircle,
-  FaLocationArrow,
 } from "react-icons/fa";
 import { styled } from "styled-components";
-import ImgBG from "../../assets/imgs/checkout/bg-img.svg";
+import ImgBG from "../../assets/imgs/checkout/bg-img.jpg";
 
 export const CheckoutContainBG = styled.div`
+  margin-top: 80px;
   width: 100%;
-  height: auto;
-  background-image: url("${ImgBG}");
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  background-image: url('${ImgBG}');
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1;
 `;
 
 export const CheckoutContainer = styled.div`
-  margin: 80px auto;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -45,9 +43,9 @@ export const ContainerVertical = styled.div`
   }
 `;
 export const RightTitleText = styled.h2`
-  color: var(--blue-light);
+  color: var(--black);
   font-size: 24px;
-  text-shadow: -1px 1px 1px var(--soft-black);
+  text-shadow: -1px 1px 1px var(--grey-light);
 `;
 
 export const LeftContainer = styled.div`
@@ -177,13 +175,15 @@ export const InputSubmit = styled.div`
 `;
 export const RightContainer = styled(LeftContainer)`
   gap: 30px;
+  padding-top: 20px;
 `;
 
 export const ItemsCartContainer = styled.div`
+  border-top: 1px solid var(--black);
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 10px;
+  padding:10px;
   height: 500px;
   overflow-y: scroll;
   gap: 30px;

@@ -1,18 +1,33 @@
-import { OrderItemCardContainer, OrderItemMid } from "./OrdersCardDetailStyles";
+import {
+  LeftBottomContainer,
+  LeftCardOrderContainer,
+  OrderItemCardContainer,
+  OrderItemMid,
+} from "./OrdersCardDetailStyles";
 import { discountOff } from "../../utils/percentaje";
 
 const OrderItemCard = ({
   id,
   title,
   price,
+  imgs,
   discount,
-  size,
+  sizeSelect,
   description,
   quantity,
 }) => {
   return (
     <OrderItemCardContainer>
-      <h3>{title}</h3>
+      <LeftCardOrderContainer>
+        <h3>{title}</h3>
+
+        <LeftBottomContainer>
+          <img src={imgs[0].img} alt={title} />
+          <p>
+            Talle: <b>{sizeSelect}</b>
+          </p>
+        </LeftBottomContainer>
+      </LeftCardOrderContainer>
 
       <OrderItemMid>
         <p>Cantidad</p>

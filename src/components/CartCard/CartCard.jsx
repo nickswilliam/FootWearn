@@ -9,17 +9,12 @@ import {
   PriceText,
   PriceTextOff,
   Quantity,
-  RightBottom,
   RightCartInfo,
   RightMid,
   TitleItemCart,
-  TopRightInfo,
   PriceContains,
   DiscountOff,
-  RightDiv,
   RightSizeText,
-  RightSelect,
-  RightOption,
 } from "./CartCardStyles";
 import { useState } from "react";
 import { discountOff } from "../../utils/percentaje";
@@ -32,7 +27,7 @@ export const CartCard = ({
   imgs,
   price,
   quantity,
-  size,
+  sizeSelect,
   discount,
   description,
 }) => {
@@ -41,24 +36,22 @@ export const CartCard = ({
   return (
     <CartCardItem>
       <LeftCartInfo>
-        <ImgItemCart src={imgs[0].img} alt={title} />
         <TitleItemCart>{title}</TitleItemCart>
+        <ImgItemCart src={imgs[0].img} alt={title} />
       </LeftCartInfo>
 
       <RightCartInfo>
-        <TopRightInfo>{description}</TopRightInfo>
-
         <MidTopText>Cantidad: </MidTopText>
         <RightMid>
-          <BtnsQuant onClick={() => dispatch(removeToCart(id))}>
+          <BtnsQuant onClick={() => dispatch(removeToCart({id, sizeSelect}))}>
             {quantity > 1 ? (
               "-"
             ) : (
-              <FaTrash color="var(--white)" pointerEvents="none" />
+              <FaTrash color="var(--black)" pointerEvents="none" />
             )}
           </BtnsQuant>
 
-          <Quantity>{quantity}</Quantity>
+          <Quantity>X{quantity}</Quantity>
 
           <BtnsQuant
             adder
@@ -70,7 +63,7 @@ export const CartCard = ({
                   imgs,
                   price,
                   quantity,
-                  size,
+                  sizeSelect,
                   discount,
                   description,
                 })
@@ -81,33 +74,22 @@ export const CartCard = ({
           </BtnsQuant>
         </RightMid>
 
-        <RightBottom>
-          <PriceDiv>
-            Precio: $
-            {discount > 0 ? (
-              <PriceContains>
-                <PriceTextOff>${price * quantity}</PriceTextOff>
-                <PriceText>{discountOff(price * quantity, discount)}</PriceText>
-              </PriceContains>
-            ) : (
-              <PriceText>{quantity * price}</PriceText>
-            )}
-            {discount > 0 && <DiscountOff>{discount}% OFF</DiscountOff>}
-          </PriceDiv>
-        </RightBottom>
+        <RightSizeText>Talle: {sizeSelect}</RightSizeText>
       </RightCartInfo>
 
-      <RightDiv>
-        <RightSizeText>Talle: </RightSizeText>
+      <PriceDiv>
+        <p style={{color: 'var(--dark-violet)', textAlign: 'center'}}>Precio</p>
 
-        <RightSelect>
-          {size.map((item) => (
-            <RightOption key={id} value={item.value} disabled={!item.available}>
-              {item.value}
-            </RightOption>
-          ))}
-        </RightSelect>
-      </RightDiv>
+        {discount > 0 ? (
+          <PriceContains>
+            <PriceTextOff>${price * quantity}</PriceTextOff>
+            <PriceText>${discountOff(price * quantity, discount)}</PriceText>
+          </PriceContains>
+        ) : (
+          <PriceText>${quantity * price}</PriceText>
+        )}
+        {discount > 0 && <DiscountOff>{discount}% OFF</DiscountOff>}
+      </PriceDiv>
     </CartCardItem>
   );
 };

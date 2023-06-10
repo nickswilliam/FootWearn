@@ -5,9 +5,9 @@ import {
   CardProductContainer,
   CardProductMidContainer,
   CardProductPrices,
+  SelectStyled,
 } from "./CardProductStyles";
 import { discountOff } from "../../../utils/percentaje";
-import SelectSizeProduct from "./SelectSizeProduct/SelectSizeProduct";
 import { addToCart } from "../../../redux/cartSlice/cartSice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
@@ -26,6 +26,30 @@ const CardProduct = ({
 }) => {
   const dispatch = useDispatch();
 
+  const [sizeSelect, setSizeSelect] = useState(null);
+  const [error, setError] = useState(false);
+
+  const handleAddCart = () => {
+    if (!sizeSelect) {
+      setError(true);
+      return;
+    } else {
+      setError(false);
+      dispatch(
+        addToCart({
+          id,
+          title,
+          imgs,
+          price,
+          sizeSelect,
+          brand,
+          quantity,
+          discount,
+          description,
+        })
+      );
+    }
+  };
   return (
     <CardProductContainer>
       <CardProductSlide imgs={imgs} title={title} />
@@ -68,27 +92,23 @@ const CardProduct = ({
 
       <CardProductBottomContainer>
         <p>Talles disponibles:</p>
-        <SelectSizeProduct size={size} />
+        {error && (
+          <span style={{ color: "var(--red)" }}>
+            *Debes seleccionar un talle {console.log(sizeSelect)}
+          </span>
+        )}
 
-        <BtnAddToCart
-          onClick={() => {
-            dispatch(
-              addToCart({
-                id,
-                title,
-                imgs,
-                price,
-                size,
-                brand,
-                quantity,
-                discount,
-                description,
-              })
-            );
-          }}
-        >
-          Agregar al carrito
-        </BtnAddToCart>
+        <SelectStyled
+          value={sizeSelect}
+          placeholder={!sizeSelect? 'Selecciona un talle' : sizeSelect}
+          options={size.map((option) => ({
+            label: option.value,
+            value: option.value,
+          }))}
+          onChange={(e)=> setSizeSelect(e.value)}
+        />
+
+        <BtnAddToCart onClick={handleAddCart}>Agregar al carrito</BtnAddToCart>
       </CardProductBottomContainer>
     </CardProductContainer>
   );

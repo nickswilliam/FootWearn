@@ -49,7 +49,7 @@ const CartMenu = () => {
 
       <CartCardContainer>
         {!cartItems.length ? (
-          <p>*No hay productos en el carrito*</p>
+          <h2>*No hay productos en el carrito*</h2>
         ) : (
           cartItems.map((item) => <CartCard key={item.id} {...item} />)
         )}
@@ -77,11 +77,12 @@ const CartMenu = () => {
       {cartItems.length !== 0 && (
         <CartBottomBtns>
           <CartBtnConfirm
+          style={{color: 'var(--white-menus)'}}
             addcart="true"
             title="Confirmar compra"
             onClick={() => navigate("./checkout")}
           >
-            <FaCheckCircle />
+            <FaCheckCircle color="var(--white-menus)"/>
             Confirmar pedido
           </CartBtnConfirm>
 

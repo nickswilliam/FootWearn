@@ -6,7 +6,7 @@ export const CartContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--white-menus);
-  width: 45%;
+  width: 600px;
   height: 100vh;
   min-height: 100vh;
   overflow-y: scroll;
@@ -14,10 +14,9 @@ export const CartContainer = styled.div`
   top: 0px;
   right: 0;
   border: 1px solid var(--grey-dark);
-  border-radius: 10px 0 0 10px;
   box-shadow: 10px 10px 10px var(--shadows);
   gap: 20px;
-  padding: 20px 30px;
+  padding: 20px 15px;
   z-index: 4;
   transform: translateX(${({ show }) => (show ? "0" : "1000px")});
   opacity: ${({ show }) => (show ? "1" : "0")};
@@ -32,9 +31,7 @@ export const CartTopContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  height: 70px;
   align-items: first baseline;
-  padding: 10px 0;
 `;
 
 export const CloseCart = styled(AiOutlineClose)`
@@ -73,7 +70,7 @@ export const CartCardContainer = styled.div`
   height: auto;
 
   p {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
   }
 `;
@@ -82,13 +79,13 @@ export const CartShippingAndSub = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 10px;
   gap: 15px;
 `;
 export const ShipOrSubDiv = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-
 `;
 export const ShipOrSubTextLeft = styled.p`
   font-weight: 600;
@@ -105,17 +102,14 @@ export const CartBottomContain = styled.div`
 export const CartBottomTextLeft = styled.h3`
   font-size: 30px;
   font-weight: 800;
-  background: linear-gradient(to right, var(--blue-light), var(--red));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--dark-violet);
   padding: 10px;
   text-shadow: 1px 1px 4px var(--shadows);
 `;
 export const CartBottomTextRight = styled.h3`
   font-size: 30px;
   font-weight: 600;
-  color: var(--red);
+  color: var(--dark-violet);
   text-shadow: 1px 1px 4px var(--shadows);
 `;
 
@@ -134,11 +128,11 @@ export const CartBtnConfirm = styled.button`
   font-size: 20px;
   font-weight: 600;
   padding: 10px 30px;
+  border: 1px solid var(--black);
   background-color: ${({ addcart }) =>
-    addcart ? "var(--green-light)" : "var(--red)"};
-  border-radius: 10px;
-  border: 2px solid var(--black);
-  color: var(--black);
+    addcart ? "var(--black)" : "var(--white-menus)"};
+  border-radius: 5px;
+  color: ${({ adder }) => (adder ? "var(--white)" : "var(--black)")};
   cursor: pointer;
   transition: all ease 0.3s;
 
