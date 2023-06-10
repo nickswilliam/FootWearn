@@ -61,6 +61,7 @@ export const BtnAddToCart = styled.button = styled.button`
     width: 100%;
     padding: 10px 20px;
     color: var(--white);
+    border-radius: 5px;
     background-color: var(--green-light);
     border: 1px solid var(--gren);
     font-size: 18px;

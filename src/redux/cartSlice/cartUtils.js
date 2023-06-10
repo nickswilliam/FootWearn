@@ -23,7 +23,7 @@ export const removeItemToCart = (cartItems, product) => {
     );
   }
 
-  return cartItems.filter(item=> item.id !== productToRemove.id)
+  return cartItems.filter(item=> item.id !== productToRemove.id || item.sizeSelect !== productToRemove.sizeSelect)
 };
 
 export const resetShippingCost = (cartItems, shippingCost) => {
