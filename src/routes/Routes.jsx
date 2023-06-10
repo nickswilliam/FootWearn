@@ -12,13 +12,27 @@ const Routes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/success" element={<Success />} />
-      <Route path="/orders" element={<Orders />} />
+      <Route
+        path="/success"
+        element={
+          <ProtectedRoute redirectTo="/login">
+            <Success />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/orders"
+        element={
+          <ProtectedRoute redirectTo='/login'>
+            <Orders />
+          </ProtectedRoute>
+        }
+      />
 
       <Route
         path="/checkout"
         element={
-          <ProtectedRoute redirectTo="/register">
+          <ProtectedRoute redirectTo="/login">
             <Checkout />
           </ProtectedRoute>
         }

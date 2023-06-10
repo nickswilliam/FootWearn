@@ -11,6 +11,7 @@ import SelectSizeProduct from "./SelectSizeProduct/SelectSizeProduct";
 import { addToCart } from "../../../redux/cartSlice/cartSice";
 import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { ButtonTransparent } from "../../UI/UIStyles";
 
 const CardProduct = ({
   id,
@@ -24,13 +25,32 @@ const CardProduct = ({
   description,
 }) => {
   const dispatch = useDispatch();
-  
+
   return (
     <CardProductContainer>
       <CardProductSlide imgs={imgs} title={title} />
 
       <CardProductMidContainer>
-        <h3 style={{ fontSize: "22px" }}>{brand.toUpperCase()}</h3>
+        <ButtonTransparent
+          style={{ alignSelf: "flex-start" }}
+          onClick={() =>
+            console.log({
+              id,
+              title,
+              imgs,
+              price,
+              size,
+              brand,
+              quantity,
+              discount,
+              description,
+            })
+          }
+        >
+          <h3 style={{ fontSize: "22px", pointerEvents: "none" }}>
+            {brand.toUpperCase()}
+          </h3>
+        </ButtonTransparent>
         <p>{description}</p>
 
         <CardProductPrices>
@@ -48,7 +68,7 @@ const CardProduct = ({
 
       <CardProductBottomContainer>
         <p>Talles disponibles:</p>
-        <SelectSizeProduct size={size}/>
+        <SelectSizeProduct size={size} />
 
         <BtnAddToCart
           onClick={() => {
