@@ -7,7 +7,7 @@ export const SearchBarForm = styled.form`
     bordered ? "1px solid transparent" : "1px solid var(--grey-dark)"};
   padding: 10px 10px;
   max-width: 1200px;
-  width: 50%;
+  width: 80%;
   gap: 10px;
   position: relative;
   transition: all ease 0.3s;

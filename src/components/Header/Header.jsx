@@ -47,8 +47,6 @@ const Header = () => {
           <FaBars size="25px" pointerEvents="none" />
         </ToggleMenuBtn>
 
-        
-
         <ButtonCart onClick={handleCart} title={cartMenu && "Abrir carrito"}>
           <CartBubble>{totalCartItemsQuantity}</CartBubble>
           <Cart />

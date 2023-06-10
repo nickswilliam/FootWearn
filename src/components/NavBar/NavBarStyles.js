@@ -6,11 +6,13 @@ export const Navbar = styled.nav`
   justify-content: center;
   align-items: center;
   padding: 10px 15px;
-  transition: all ease .2s;
+  height: auto;
+  transition: all ease 0.2s;
+  width: 100%;
 
   @media (max-width: 967px) {
     display: ${({ toggleMenu }) => (toggleMenu ? "flex" : "none")};
-    transition: all ease .2s;
+    transition: all ease 0.2s;
   }
 `;
 
@@ -28,6 +30,7 @@ export const NavUl = styled.ul`
     left: 0;
     right: 0;
     width: 100%;
+    height: auto;
     background-color: var(--white-menus);
     border-radius: 5px;
     box-shadow: -8px 5px 6px var(--shadows), 8px 5px 6px var(--shadows);
@@ -38,16 +41,18 @@ export const NavLi = styled.li`
   font-size: 22px;
   font-weight: 600;
   padding: 29px 0px;
-  height: 100%;
+  height: auto;
   color: var(--black);
   cursor: pointer;
   position: relative;
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   gap: 10px;
 
-
   svg {
+    height: auto;
     &.normal {
       transform: rotate(0);
       transition: all ease 0.15s;
@@ -57,16 +62,24 @@ export const NavLi = styled.li`
       transition: all ease 0.15s;
     }
   }
+
+  @media (max-width: 967px){
+    &:hover{
+      background-color: var(--grey-light);
+    }
+  }
 `;
 export const StyledNavLink = styled(NavLink)`
   display: flex;
   gap: 15px;
   align-items: center;
+  justify-content: center;
   padding: 20px 30px;
   text-decoration: none;
   color: var(--black);
   transition: all ease 0.25;
   position: relative;
+  width: 100%;
   &.active {
     font-weight: 800;
     background: linear-gradient(to right, var(--blue-light), var(--brown-dark));
@@ -92,7 +105,6 @@ export const StyledNavLink = styled(NavLink)`
   svg {
     color: var(--black);
   }
-
 `;
 
 export const LiMenu = styled.ul`
@@ -102,7 +114,7 @@ export const LiMenu = styled.ul`
   padding: 10px 0;
   background-color: var(--white-menus);
   border: 1px solid var(--grey-dark);
-  border-radius: 10px;
+  border-radius: 5px;
   gap: 5px;
   position: absolute;
   top: 80px;
@@ -168,18 +180,21 @@ export const LiMenu = styled.ul`
     animation: closed ease-out 0.2s forwards, fadeOut ease 0.15s forwards;
   }
 
-  @media (max-width: 967px){
+  @media (max-width: 967px) {
+    padding: 0;
     align-self: center;
-    left: -200%;
-    right: -200%;
-    border: 1px solid transparent;
-
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
+    border: none;
+    border-top: 1px solid var(--black);
     &::before {
-        left: auto;
-        right: auto;
+      display: none;
     }
   }
 
+  
 `;
 
 export const MenuItem = styled.li`
@@ -192,7 +207,7 @@ export const MenuItem = styled.li`
     transition: all ease-in 0.25s;
   }
 
-  @media (max-width: 967px){
+  @media (max-width: 967px) {
     align-self: center;
   }
 `;
@@ -214,5 +229,7 @@ export const MenuItemText = styled(Link)`
     transition: all ease 0.25s;
   }
 
- 
+  @media (max-width: 967px){
+    justify-content: center;
+  }
 `;

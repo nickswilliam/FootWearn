@@ -9,20 +9,45 @@ export const HeaderContainer = styled.header`
     width: 100%;
     height: 80px;
     padding: 20px 30px;
-    border-bottom: 2px solid var(--grey-light);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    box-shadow: 0px 10px 6px var(--shadows);
+    box-shadow: 0px 5px 6px var(--shadows);
     position: fixed;
 
+    @media (max-width: 1024px){
+        padding: 20px 15px;
+    }
+
+    @media (max-width: 768px){
+        padding: 15px 10px;
+    }
 `
 export const ImgLogo = styled.img`
         width: 300px;
         height: auto;
         padding: 5px 10px;
         cursor: pointer;
+        transition: all ease .2s;
+
+        @media (max-width: 1024px){
+            width: 270px;
+            padding: 5px;
+        }
+
+        @media(max-width: 768px){
+            width: 250px;
+        }
+
+        @media (max-width: 480px){
+            width: 230px;
+        }
+
+        @media (max-width: 400px){
+            width: 200px;
+            padding: 0;
+        }
 `
 export const NavWrapper = styled.div`
     order: 4;
