@@ -28,6 +28,7 @@ const CardProduct = ({
 
   const [sizeSelect, setSizeSelect] = useState(null);
   const [error, setError] = useState(false);
+  const sizeFilteredArray = size.filter(item=> item.value && item.available)
 
   const handleAddCart = () => {
     if (!sizeSelect) {
@@ -63,7 +64,7 @@ const CardProduct = ({
               title,
               imgs,
               price,
-              size,
+              sizeFilteredArray,
               brand,
               quantity,
               discount,
@@ -94,14 +95,14 @@ const CardProduct = ({
         <p>Talles disponibles:</p>
         {error && (
           <span style={{ color: "var(--red)" }}>
-            *Debes seleccionar un talle {console.log(sizeSelect)}
+            *Debes seleccionar un talle
           </span>
         )}
 
         <SelectStyled
           value={sizeSelect}
           placeholder={!sizeSelect? 'Selecciona un talle' : sizeSelect}
-          options={size.map((option) => ({
+          options={sizeFilteredArray.map((option) => ({
             label: option.value,
             value: option.value,
           }))}

@@ -43,7 +43,10 @@ const Header = () => {
       <SearchBar />
 
       <NavWrapper>
-        <ToggleMenuBtn onClick={() => setToggleMenu(!toggleMenu)}>
+        <ToggleMenuBtn
+          className="menu_toggle"
+          onClick={(e) => setToggleMenu(!toggleMenu)}
+        >
           <FaBars size="25px" pointerEvents="none" />
         </ToggleMenuBtn>
 
