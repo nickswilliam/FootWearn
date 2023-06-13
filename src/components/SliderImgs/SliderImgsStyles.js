@@ -1,11 +1,33 @@
 import { styled } from "styled-components";
 import { SwiperSlide, Swiper } from "swiper/react"
 
-export const SwiperContainer = styled(Swiper)`
-    box-shadow: -10px 10px 15px var(--shadows), 10px 0px 15px var(--shadows);
+export const SliderHeroContainer = styled.div`
+    max-width: 1300px;
     width: 100%;
-    height: calc(100vh -80px);
-    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+
+`
+
+export const SwiperContainer = styled(Swiper)`
+    width: 100%;
+    height: auto;
+    transition: all ease .2s;
+    /* @media (max-width: 1024px){
+        max-width: 900px;
+    }
+
+    @media (max-width: 967px){
+        max-width: 768px;
+    }
+
+    @media (max-width: 768px){
+        max-width: 480px;
+    }
+
+    @media (max-width: 480px){
+        max-width: 320px;
+    } */
 `
 
 export const SwiperSlideContainer = styled(SwiperSlide)`
@@ -14,7 +36,7 @@ export const SwiperSlideContainer = styled(SwiperSlide)`
 
 export const SliderImg = styled.img`
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
 `
 

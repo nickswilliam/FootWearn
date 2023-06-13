@@ -1,6 +1,7 @@
 import { Autoplay, Pagination, Scrollbar, Navigation, A11y } from "swiper";
 import { heroImgs } from "./heroSliderImgs";
 import {
+  SliderHeroContainer,
   SliderImg,
   SwiperContainer,
   SwiperSlideContainer,
@@ -18,46 +19,48 @@ const SliderImgs = ({ doScroll, scrollGen, scrollCat }) => {
     else if (data === "store") {
       doScroll();
       return;
-    } else if(data === 'genre'){
+    } else if (data === "genre") {
       scrollGen();
-      return
-    } else{
+      return;
+    } else {
       scrollCat();
-      return
+      return;
     }
   };
 
   return (
-    <SwiperContainer
-      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      loop={true}
-      spaceBetween={0}
-      slidesPerView={1}
-      navigation={{
-        enabled: true,
-      }}
-      pagination={{
-        clickable: true,
-        type: "bullets",
-      }}
-      autoplay={{
-        pauseOnMouseEnter: true,
-        delay: 3500,
-        disableOnInteraction: false,
-      }}
-    >
-      {heroImgs.map((slide) => (
-        <SwiperSlideContainer
-          key={slide.id}
-          style={{
-            cursor: `${slide.cursor ? "pointer" : "default"}`,
-          }}
-          onClick={() => slideToStore(slide.category)}
-        >
-          <SliderImg src={slide.img} alt={slide.name} title={slide.title} />
-        </SwiperSlideContainer>
-      ))}
-    </SwiperContainer>
+    <SliderHeroContainer>
+      <SwiperContainer
+        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        loop={true}
+        spaceBetween={0}
+        slidesPerView={1}
+        navigation={{
+          enabled: true,
+        }}
+        pagination={{
+          clickable: true,
+          type: "bullets",
+        }}
+        autoplay={{
+          pauseOnMouseEnter: true,
+          delay: 3500,
+          disableOnInteraction: false,
+        }}
+      >
+        {heroImgs.map((slide) => (
+          <SwiperSlideContainer
+            key={slide.id}
+            style={{
+              cursor: `${slide.cursor ? "pointer" : "default"}`,
+            }}
+            onClick={() => slideToStore(slide.category)}
+          >
+            <SliderImg src={slide.img} alt={slide.name} title={slide.title} />
+          </SwiperSlideContainer>
+        ))}
+      </SwiperContainer>
+    </SliderHeroContainer>
   );
 };
 export default SliderImgs;

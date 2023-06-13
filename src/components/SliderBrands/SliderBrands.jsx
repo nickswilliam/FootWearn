@@ -5,7 +5,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import 'swiper/css/effect-cube';
 import { brands } from "./brandsList";
 
 const SliderBrands = () => {
@@ -21,12 +20,25 @@ const SliderBrands = () => {
       }}
       modules={[Navigation, Pagination, A11y]}
       loop={true}
+      slidesPerView={1}
       spaceBetween={50}
-      slidesPerView={3}
+      breakpoints={{
+        320: {
+          slidesPerView: 1
+        },
+        480: {
+          slidesPerView: 1
+        },
+        768:{
+          slidesPerView: 2
+        },
+        1024:{
+          slidesPerView: 3
+        }
+      }}
       navigation={{
         enabled: true,
       }}
-      effect='cube'
     >
       {brands.map((item) => (
         <SwiperSlide
