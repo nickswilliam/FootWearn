@@ -55,6 +55,13 @@ export const HeadFilterCard =  styled.div`
       transition: all ease .2s;
     }
   }
+
+  @media (max-width: 1024px){
+    width: 200px;
+  }
+  @media (max-width: 500px){
+    width: 150px;
+  }
 `
 
 

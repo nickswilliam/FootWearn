@@ -17,6 +17,14 @@ export const PaginationContainer = styled.div`
     width: 100%;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 768px){
+        justify-content: center;
+    }
+
+    @media (max-width: 650px){
+        align-items: flex-start;
+    }
 `
 export const PaginateBtn = styled.button`
     display: flex;
@@ -46,6 +54,14 @@ export const PaginateBtn = styled.button`
         opacity: 1;
         transition: all .1s ease;
     }
+
+    @media (max-width: 650px){
+        padding: 10px;
+    }
+
+    @media (max-width: 400px){
+        font-size: 16px;
+    }
 `
 
 
@@ -54,6 +70,24 @@ export const PagedContainer = styled.div`
     gap: 5px;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 650px){
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        align-items: flex-start;
+        justify-items: first baseline;
+    }
+
+    @media (max-width: 480px){
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    @media (max-width: 400px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
 `
 
 export const PagedBox = styled.button`
@@ -83,5 +117,15 @@ export const PagedBox = styled.button`
         opacity: 1;
         transform: scale(1.05);
         transition: all ease-in .1s;
+    }
+
+    @media (max-width: 650px){
+        width: 35px;
+        height: 35px;
+    }
+
+    @media (max-width: 480px){
+        width: 30px;
+        height: 30px;
     }
 `

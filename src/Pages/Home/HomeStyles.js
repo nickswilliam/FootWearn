@@ -21,6 +21,22 @@ export const MainTitle = styled.h1`
   padding: 10px;
   text-align: center;
   letter-spacing: 2px;
+
+  @media (max-width: 1024px){
+    font-size: 44px;
+  }
+
+  @media (max-width: 768px){
+    font-size: 38px;
+  }
+
+  @media (max-width: 480px){
+    font-size: 30px;
+  }
+
+  @media (max-width: 400px){
+    font-size: 26px;
+  }
 `;
 
 export const AllStoreWrapper = styled.div`
@@ -49,6 +65,18 @@ export const SecondTitle = styled.h2`
   max-width: 1300px;
   text-shadow: 2px 2px 6px var(--shadows), -2px 2px 6px var(--shadows);
   text-align: center;
+
+  @media (max-width: 1024px){
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px){
+    font-size: 34px;
+  }
+
+  @media (max-width: 480px){
+    font-size: 28px;
+  }
 `;
 
 export const TitleCategories = styled.h3`
@@ -77,6 +105,15 @@ export const ProductsTitle = styled.h2`
   color: var(--black);
   padding: 10px;
   border-bottom: 1px solid var(--grey-dark);
+
+  @media (max-width: 768px){
+    font-size: 30px;
+  }
+
+  @media (max-width: 480px){
+    font-size: 26px;
+    text-align: center;
+  }
 `;
 
 export const AboutWrapper = styled.section`
