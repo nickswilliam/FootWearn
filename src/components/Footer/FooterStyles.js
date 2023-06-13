@@ -87,14 +87,11 @@ export const ParagraphText = styled.p`
 `;
 
 export const RightFiscalImg = styled.img`
-  width: 120px;
+  width: 80px;
   height: auto;
   align-self: center;
   justify-self: center;
 
-  @media (max-width: 768px){
-    width: 80px;
-  }
 `;
 
 export const FooterBottomContainer = styled.div`
