@@ -16,10 +16,21 @@ export const AboutContainer = styled.div`
     width: 80%;
     text-align: center;
     letter-spacing: 2px;
+    
+    @media (max-width: 1024px){
+    font-size: 24px;
+  }
+
+  @media (max-width: 768px){
+    width: 100%;
+  }
   }
 
   p span {
     font-weight: 600;
+    @media (max-width: 1024px){
+    font-size: 24px;
+  }
   }
 `;
 export const AboutTitle = styled.h2`
@@ -31,6 +42,18 @@ export const AboutTitle = styled.h2`
   color: var(--orange);
   text-shadow: 2px 2px 1px var(--soft-black), -2px 2px 1px var(--light-yellow);
   font-family: "Under-Rated";
+
+  @media (max-width: 1024px){
+    font-size: 36px;
+  }
+
+  @media (max-width: 768px){
+    font-size: 34px;
+  }
+
+  @media (max-width: 480px){
+    font-size: 30px;
+  }
 `;
 
 export const BenefitsContainer = styled.div`
@@ -38,9 +61,24 @@ export const BenefitsContainer = styled.div`
   width: 100%;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
   height: auto;
   margin-top: 20px;
+
+  @media (max-width: 768px){
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 20px;
+  }
+
+  @media (max-width: 415px){
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
 `;
 
 export const BenefitContainer = styled.div`
@@ -68,5 +106,10 @@ export const BenefitContainer = styled.div`
   &:hover {
     transform: scale(1.04);
     filter: drop-shadow(4px 4px 10px var(--blue));
+  }
+
+  @media (max-width: 1030px){
+    width: 180px;
+    height: 180px;
   }
 `;
