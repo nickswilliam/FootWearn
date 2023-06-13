@@ -9,6 +9,21 @@ export const ContactContainer = styled.div`
   height: auto;
   margin-top: 80px;
   padding-bottom: 80px;
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 60px;
+  }
 `;
 export const ContactLeftDiv = styled.div`
   margin-top: 80px;
@@ -24,16 +39,46 @@ export const ContactLeftDiv = styled.div`
     border: none;
     border-radius: 5px;
     box-shadow: -4px 4px 6px var(--shadows);
+
+    @media (max-width: 1024px) {
+      width: 280px;
+      height: 280px;
+      align-self: center;
+    }
+
+    @media (max-width: 768px) {
+      width: 260px;
+      height: 260px;
+    }
+
+    @media (max-width: 480px) {
+      width: 240px;
+      height: 240px;
+    }
   }
 
   p {
     color: var(--black);
     font-size: 20px;
+
+    @media (max-width: 1024px) {
+      align-self: center;
+    }
   }
 
   span {
     font-weight: 600;
     color: var(--blue-light);
+
+    @media (max-width: 1024px) {
+      align-self: center;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+    padding: 20px;
   }
 `;
 
@@ -42,6 +87,18 @@ export const ContactTitle = styled.h2`
   color: var(--orange);
   text-shadow: -1px 1px 1px var(--soft-black);
   margin-top: 40px;
+
+  @media (max-width: 1024px) {
+    font-size: 38px;
+    align-self: center;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+  @media (max-width: 480px) {
+    font-size: 34px;
+  }
 `;
 
 export const ContactRightDiv = styled.div`
@@ -49,12 +106,26 @@ export const ContactRightDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   align-self: center;
 
   h2 {
     color: var(--orange);
     font-size: 30px;
+
+    @media (max-width: 1024px) {
+      align-self: center;
+      text-align: center;
+      font-size: 28px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 26px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 24px;
+    }
   }
 `;
 
@@ -64,6 +135,18 @@ export const ContainerInputs = styled.div`
   align-items: center;
   gap: 15px;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    width: 95%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    width: 98%;
+  }
 `;
 
 export const ContainInput = styled.div`
@@ -81,11 +164,29 @@ export const ContainInput = styled.div`
     transform: scale(1.01);
     transition: all ease-in 0.15s;
   }
+
+  @media (max-width: 1024px) {
+    padding: 15px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 export const ContactLabel = styled.label`
   font-size: 22px;
   color: var(--black);
   font-weight: 600;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
 `;
 
 export const ContactInput = styled.input`
@@ -118,6 +219,20 @@ export const ContactInput = styled.input`
     border-color: var(--grey-dark);
     transition: all ease 0.2s;
   }
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    width: 95%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  @media (max-width: 480px) {
+    width: 98%;
+    font-size: 18px;
+  }
 `;
 
 export const SubmitBtn = styled.input`
@@ -139,5 +254,51 @@ export const SubmitBtn = styled.input`
     color: var(--grey-light);
     background-color: var(--orange2);
     transition: all ease 0.2s;
+  }
+`;
+
+export const SubmitContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  align-self: center;
+
+  button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    svg {
+      color: var(--green-light);
+      pointer-events: none;
+
+      @media (max-width: 1024px) {
+        font-size: 40px;
+      }
+      @media (max-width: 768px) {
+        font-size: 36px;
+      }
+      @media (max-width: 480px) {
+        font-size: 30px;
+      }
+    }
+  }
+
+  h3 {
+    color: var(--orange);
+    font-size: 40px;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+      font-size: 36px;
+    }
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+    @media (max-width: 480px) {
+      font-size: 26px;
+    }
   }
 `;

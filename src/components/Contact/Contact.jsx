@@ -8,6 +8,7 @@ import {
   ContainInput,
   ContainerInputs,
   SubmitBtn,
+  SubmitContainer
 } from "./ContactStyles";
 
 import { FaCheckCircle } from "react-icons/fa";
@@ -55,23 +56,17 @@ const Contact = () => {
               <SubmitBtn type="submit" value="Suscribirse" />
             </ContainerInputs>
           ) : (
-            <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <SubmitContainer>
               <button
-                style={{
-                  cursor: "pointer",
-                  outline: 'none',
-                  border: 'none',
-                  backgroundColor: 'transparent'
-                }}
                 title="Volver a suscribirme"
-                onClick={()=> setToggleSubmit(!toggleSubmit)}
+                onClick={() => setToggleSubmit(!toggleSubmit)}
               >
-                <FaCheckCircle size="50px" color="var(--green-light)" pointerEvents='none'/>
+                <FaCheckCircle/>
               </button>
-              <h3 style={{ color: "var(--orange)", fontSize: "40px" }}>
+              <h3>
                 Gracias por tu suscripción!
               </h3>
-            </div>
+            </SubmitContainer>
           )}
         </form>
       </ContactRightDiv>
