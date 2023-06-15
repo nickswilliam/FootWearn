@@ -88,6 +88,9 @@ const Header = () => {
             if(!hiddenMenu){
               dispatch(toggleHiddenMenu())
             }
+            if(toggleMenu){
+              setToggleMenu(!toggleMenu)
+            }
             setToggleSearchMenu(!toggleSearchMenu);
           }}
         >
