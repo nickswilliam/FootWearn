@@ -12,10 +12,11 @@ import {
   SearchBtn,
 } from "./HeaderStyles";
 import Logo from "../../assets/imgs/logo/logo.png";
+import LogoMobile from "../../assets/imgs/footer/footw-logo.png";
 import SearchBar from "../UI/SearchBar";
 import NavBar from "../NavBar/NavBar";
 import { FaBars, FaSearch } from "react-icons/fa";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import CartMenu from "../NavBar/CartMenu/CartMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCartMenu } from "../../redux/cartSlice/cartSice";
@@ -23,6 +24,18 @@ import { toggleHiddenMenu } from "../../redux/user/userSlice";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const { cartMenu, cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -42,7 +55,11 @@ const Header = () => {
 
   return (
     <HeaderContainer>
-      <ImgLogo src={Logo} alt="logo" onClick={() => navigate("/")} />
+      {isMobile ? (
+        <ImgLogo src={LogoMobile} alt="logo-mobile" onClick={() => navigate("/")} />
+      ) : (
+        <ImgLogo src={Logo} alt="logo" onClick={() => navigate("/")} />
+      )}
 
       <SearchBar
         setToggleSearchMenu={setToggleSearchMenu}

@@ -80,6 +80,7 @@ export const StyledNavLink = styled(NavLink)`
   transition: all ease 0.25;
   position: relative;
   width: 100%;
+  
   &.active {
     font-weight: 800;
     background: linear-gradient(to right, var(--blue-light), var(--brown-dark));

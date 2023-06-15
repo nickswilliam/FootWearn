@@ -44,15 +44,15 @@ export const ImgLogo = styled.img`
         }
 
         @media(max-width: 768px){
-            width: 250px;
+            width: 100px;
         }
 
         @media (max-width: 480px){
-            width: 200px;
+            width: 90px;
         }
 
         @media (max-width: 400px){
-            width: 150px;
+            width: 80px;
             padding: 0;
         }
 `

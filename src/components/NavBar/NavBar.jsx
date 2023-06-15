@@ -51,7 +51,8 @@ const MenuSection = ({ toggleSection }) => (
 );
 
 const UserLink = ({ currentUser, dispatch }) => (
-  <StyledNavLink activeClassName="active" to={currentUser ? "/" : "/register"}>
+
+  <StyledNavLink to={currentUser ? dispatch(toggleHiddenMenu()) : "/register"}>
     <FaUser />
     {currentUser
       ? `${
@@ -85,7 +86,7 @@ const NavBar = ({ toggleMenu }) => {
     <Navbar toggleMenu={toggleMenu}>
       <NavUl>
         <NavLi>
-          <StyledNavLink activeClassName="active" to="/">
+          <StyledNavLink activeClassName="active" to='/'>
             Inicio
           </StyledNavLink>
         </NavLi>

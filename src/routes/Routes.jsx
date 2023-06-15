@@ -32,7 +32,7 @@ const Routes = () => {
       <Route
         path="/checkout"
         element={
-          <ProtectedRoute redirectTo="/register">
+          <ProtectedRoute redirectTo="/login">
             <Checkout />
           </ProtectedRoute>
         }
