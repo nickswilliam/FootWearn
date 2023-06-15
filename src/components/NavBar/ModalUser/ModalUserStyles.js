@@ -11,8 +11,8 @@ export const ModalUserContainer = styled.div`
   border-radius: 10px;
   gap: 30px;
   position: absolute;
-  top: 100px;
-  left: 0px;
+  top: 80px;
+  left: -20px;
   z-index: 4;
   box-shadow: 8px 8px 8px var(--shadows), -8px 8px 8px var(--shadows);
   transform: translateX(-100px);

@@ -50,19 +50,6 @@ const MenuSection = ({ toggleSection }) => (
   </LiMenu>
 );
 
-const UserLink = ({ currentUser, dispatch }) => (
-  <StyledNavLink /* to={currentUser ? dispatch(toggleHiddenMenu()) : "/register"} */
-  >
-    <FaUser />
-    {currentUser
-      ? `${
-          currentUser.name.toUpperCase().charAt(0) +
-          currentUser.lastname.toUpperCase().charAt(0)
-        }`
-      : "Registro"}
-  </StyledNavLink>
-);
-
 const NavBar = ({ toggleMenu }) => {
   const { cartMenu, hiddenMenu } = useSelector((state) => state.cart);
   const currentUser = useSelector((state) => state.user.currentUser);
@@ -86,9 +73,7 @@ const NavBar = ({ toggleMenu }) => {
     <Navbar toggleMenu={toggleMenu}>
       <NavUl>
         <NavLi>
-          <StyledNavLink activeClassName="active" to="/">
-            Inicio
-          </StyledNavLink>
+          <StyledNavLink to="/">Inicio</StyledNavLink>
         </NavLi>
         <NavLi onClick={handleSection}>
           Secciones
@@ -97,14 +82,15 @@ const NavBar = ({ toggleMenu }) => {
         </NavLi>
         <NavLi onClick={handleMenuClick}>
           <ModalUser />
-          {/* <UserLink currentUser={currentUser} dispatch={dispatch} /> */}
-          <FaUser size='20px' />
-          {currentUser
-            ? `${
-                currentUser.name.toUpperCase().charAt(0) +
-                currentUser.lastname.toUpperCase().charAt(0)
-              }`
-            : "Registro"}
+          <FaUser size="20px" color={currentUser? 'var(--blue-light)': 'var(--black)'} />
+          {currentUser ? (
+            <p style={{ color: "var(--blue-light)" }}>
+              {currentUser.name.toUpperCase().charAt(0) +
+                currentUser.lastname.toUpperCase().charAt(0)}
+            </p>
+          ) : (
+            "Registro"
+          )}
         </NavLi>
       </NavUl>
     </Navbar>

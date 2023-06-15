@@ -81,31 +81,6 @@ export const StyledNavLink = styled(NavLink)`
   position: relative;
   width: 100%;
   
-  &.active {
-    font-weight: 800;
-    background: linear-gradient(to right, var(--blue-light), var(--brown-dark));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition: all ease-out 0.3s;
-
-    svg {
-      color: var(--blue-light);
-    }
-  }
-
-  &.activate {
-    font-weight: 800;
-    color: var(--blue-light);
-  }
-
-  &:active {
-    color: var(--blue-light);
-  }
-
-  svg {
-    color: var(--black);
-  }
 `;
 
 export const LiMenu = styled.ul`
