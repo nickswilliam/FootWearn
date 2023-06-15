@@ -81,7 +81,7 @@ const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
       setToggleSection(!toggleSection);
     }
 
-  }, [pathname, toggleSearchMenu]);
+  }, [pathname, toggleSearchMenu, !cartMenu]);
 
   const handleMenu = () => {
     setToggleMenu(!toggleMenu);

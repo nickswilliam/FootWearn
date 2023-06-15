@@ -58,6 +58,12 @@ const Header = () => {
 
   const inputRef = useRef(null);
   const handleCart = () => {
+    if(toggleMenu){
+      setToggleMenu(!toggleMenu)
+    }
+    if(!hiddenMenu){
+      dispatch(toggleHiddenMenu())
+    }
     dispatch(toggleCartMenu());
   };
 
