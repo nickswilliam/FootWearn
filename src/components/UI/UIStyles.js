@@ -10,7 +10,7 @@ export const SearchBarContainer = styled.div`
   top: 0px;
   left: 0;
   background-color: rgba(13, 14, 15, 0.5);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
   padding: 10px 20px 30px 20px;
   z-index: 4;
 `

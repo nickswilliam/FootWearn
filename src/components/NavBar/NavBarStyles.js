@@ -21,6 +21,7 @@ export const NavUl = styled.ul`
   align-items: center;
   justify-content: space-around;
   gap: 20px;
+  
 
   @media (max-width: 967px) {
     flex-direction: column;
@@ -63,8 +64,8 @@ export const NavLi = styled.li`
     }
   }
 
-  @media (max-width: 967px){
-    &:hover{
+  @media (max-width: 967px) {
+    &:hover {
       background-color: var(--grey-light);
     }
   }
@@ -80,7 +81,6 @@ export const StyledNavLink = styled(NavLink)`
   transition: all ease 0.25;
   position: relative;
   width: 100%;
-  
 `;
 
 export const LiMenu = styled.ul`
@@ -169,8 +169,6 @@ export const LiMenu = styled.ul`
       display: none;
     }
   }
-
-  
 `;
 
 export const MenuItem = styled.li`
@@ -205,7 +203,7 @@ export const MenuItemText = styled(Link)`
     transition: all ease 0.25s;
   }
 
-  @media (max-width: 967px){
+  @media (max-width: 967px) {
     justify-content: center;
   }
 `;

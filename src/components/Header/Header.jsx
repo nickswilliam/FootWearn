@@ -4,11 +4,9 @@ import {
   CartBubble,
   HeaderContainer,
   Overlay,
-  UserNavLink,
   ImgLogo,
   ToggleMenuBtn,
   NavWrapper,
-  SearchWrapper,
   SearchBtn,
 } from "./HeaderStyles";
 import Logo from "../../assets/imgs/logo/logo.png";
@@ -21,10 +19,11 @@ import CartMenu from "../NavBar/CartMenu/CartMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCartMenu } from "../../redux/cartSlice/cartSice";
 import { toggleHiddenMenu } from "../../redux/user/userSlice";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
     if (window.innerWidth <= 768) {
@@ -34,17 +33,21 @@ const Header = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    window.addEventListener('resize', handleSize)
+    window.addEventListener("resize", handleSize);
 
-    return ()=>{
-      window.removeEventListener('resize', handleSize)
+    if (toggleMenu) {
+      setToggleMenu(!toggleMenu);
     }
-  }, [window.innerWidth]);
+
+    return () => {
+      window.removeEventListener("resize", handleSize);
+    };
+  }, [window.innerWidth, pathname]);
 
   const { cartMenu, cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const currentUser = useSelector((state) => state.user.currentUser);
+  const { hiddenMenu } = useSelector((state) => state.user);
 
   const totalCartItemsQuantity = cartItems.reduce(
     (acc, item) => (acc += item.quantity),
@@ -82,6 +85,9 @@ const Header = () => {
             if (inputRef.current) {
               inputRef.current.focus();
             }
+            if(!hiddenMenu){
+              dispatch(toggleHiddenMenu())
+            }
             setToggleSearchMenu(!toggleSearchMenu);
           }}
         >
@@ -100,7 +106,8 @@ const Header = () => {
           <Cart />
         </ButtonCart>
       </NavWrapper>
-      <NavBar toggleMenu={toggleMenu} />
+
+      <NavBar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} toggleSearchMenu={toggleSearchMenu}/>
       <CartMenu />
       {cartMenu && <Overlay onClick={handleCart} />}
     </HeaderContainer>

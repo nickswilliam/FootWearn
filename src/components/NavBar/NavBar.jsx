@@ -1,6 +1,6 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   FaPhone,
   FaPhotoVideo,
@@ -21,27 +21,27 @@ import {
   StyledNavLink,
 } from "./NavBarStyles";
 
-const MenuSection = ({ toggleSection }) => (
+const MenuSection = ({ toggleSection, handleMenu }) => (
   <LiMenu className={toggleSection ? "openedSection" : "closedSection"}>
-    <MenuItem>
+    <MenuItem onClick={handleMenu}>
       <MenuItemText to="/#hero">
         <FaPhotoVideo />
         Galeria
       </MenuItemText>
     </MenuItem>
-    <MenuItem>
+    <MenuItem onClick={handleMenu}>
       <MenuItemText to="/#products">
         <FaStore />
         Productos
       </MenuItemText>
     </MenuItem>
-    <MenuItem>
+    <MenuItem onClick={handleMenu}>
       <MenuItemText to="/#about">
         <FaQuestion />
         Acerca
       </MenuItemText>
     </MenuItem>
-    <MenuItem>
+    <MenuItem onClick={handleMenu}>
       <MenuItemText to="/#contact">
         <FaPhone />
         Contacto
@@ -50,39 +50,66 @@ const MenuSection = ({ toggleSection }) => (
   </LiMenu>
 );
 
-const NavBar = ({ toggleMenu }) => {
-  const { cartMenu, hiddenMenu } = useSelector((state) => state.cart);
-  const currentUser = useSelector((state) => state.user.currentUser);
+const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
+  const { cartMenu } = useSelector((state) => state.cart);
+  const { currentUser, hiddenMenu } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const [toggleSection, setToggleSection] = useState(false);
   const navigate = useNavigate();
+  const { pathname } = useLocation();
 
-  const handleSection = useCallback(() => {
-    setToggleSection((prev) => !prev);
-  }, []);
+  const handleSection = () => {
+    if (!hiddenMenu) {
+      dispatch(toggleHiddenMenu());
+    }
+    setToggleSection(!toggleSection);
+  };
 
   const handleMenuClick = () => {
     if (currentUser) {
+      if (toggleSection) {
+        setToggleSection(!toggleSection);
+      }
       dispatch(toggleHiddenMenu());
     } else {
       navigate("/register");
     }
   };
 
+  useEffect(() => {
+    if (toggleSection) {
+      setToggleSection(!toggleSection);
+    }
+
+  }, [pathname, toggleSearchMenu]);
+
+  const handleMenu = () => {
+    setToggleMenu(!toggleMenu);
+  };
   return (
-    <Navbar toggleMenu={toggleMenu}>
+    <Navbar toggleMenu={toggleMenu} toggleSearchMenu={toggleSearchMenu}>
       <NavUl>
-        <NavLi>
+        <NavLi onClick={handleMenu}>
           <StyledNavLink to="/">Inicio</StyledNavLink>
         </NavLi>
         <NavLi onClick={handleSection}>
           Secciones
           <FaSortDown className={!toggleSection ? "normal" : "rotateUp"} />
-          {toggleSection && <MenuSection toggleSection={toggleSection} />}
+          {toggleSection && (
+            <MenuSection
+              toggleSection={toggleSection}
+              handleMenu={handleMenu}
+              toggleSearchMenu={toggleSearchMenu}
+            />
+          )}
         </NavLi>
         <NavLi onClick={handleMenuClick}>
           <ModalUser />
-          <FaUser size="20px" color={currentUser? 'var(--blue-light)': 'var(--black)'} />
+
+          <FaUser
+            size="18px"
+            color={currentUser ? "var(--blue-light)" : "var(--black)"}
+          />
           {currentUser ? (
             <p style={{ color: "var(--blue-light)" }}>
               {currentUser.name.toUpperCase().charAt(0) +
