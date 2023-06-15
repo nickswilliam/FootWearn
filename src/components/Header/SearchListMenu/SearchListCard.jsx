@@ -25,6 +25,8 @@ const SearchListCard = ({
   title,
   name,
   setToggleSearch,
+  setToggleSearchMenu,
+  toggleSearchMenu
 }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -55,8 +57,10 @@ const SearchListCard = ({
     ) {
       filteredSearch();
     }
+    
     navigate('/#products')
     setToggleSearch(false);
+    setToggleSearchMenu(!toggleSearchMenu)
   };
 
   useEffect(() => {
@@ -65,7 +69,7 @@ const SearchListCard = ({
   }, [categories, genres]);
 
   return (
-    <SearchCardContainer onClick={handleSearch} title={title}>
+    <SearchCardContainer onClick={handleSearch} onTouchEnd={handleSearch} title={title}>
       <img src={image} alt={name} />
       <SearchCardTextCont>
         <h2 typed>{name}</h2>

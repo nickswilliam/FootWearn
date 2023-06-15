@@ -8,12 +8,14 @@ import {
   ImgLogo,
   ToggleMenuBtn,
   NavWrapper,
+  SearchWrapper,
+  SearchBtn,
 } from "./HeaderStyles";
 import Logo from "../../assets/imgs/logo/logo.png";
 import SearchBar from "../UI/SearchBar";
 import NavBar from "../NavBar/NavBar";
-import { FaBars } from "react-icons/fa";
-import { useState } from "react";
+import { FaBars, FaSearch } from "react-icons/fa";
+import { useRef, useState } from "react";
 import CartMenu from "../NavBar/CartMenu/CartMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleCartMenu } from "../../redux/cartSlice/cartSice";
@@ -31,7 +33,9 @@ const Header = () => {
     0
   );
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleSearchMenu, setToggleSearchMenu] = useState(false);
 
+  const inputRef = useRef(null);
   const handleCart = () => {
     dispatch(toggleCartMenu());
   };
@@ -40,9 +44,24 @@ const Header = () => {
     <HeaderContainer>
       <ImgLogo src={Logo} alt="logo" onClick={() => navigate("/")} />
 
-      <SearchBar />
+      <SearchBar
+        setToggleSearchMenu={setToggleSearchMenu}
+        toggleSearchMenu={toggleSearchMenu}
+        ref={inputRef}
+      />
 
       <NavWrapper>
+        <SearchBtn
+          onClick={() => {
+            if (inputRef.current) {
+              inputRef.current.focus();
+            }
+            setToggleSearchMenu(!toggleSearchMenu);
+          }}
+        >
+          <FaSearch pointerEvents="none" size="25px" />
+        </SearchBtn>
+
         <ToggleMenuBtn
           className="menu_toggle"
           onClick={(e) => setToggleMenu(!toggleMenu)}

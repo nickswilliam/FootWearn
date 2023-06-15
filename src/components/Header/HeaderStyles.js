@@ -24,6 +24,13 @@ export const HeaderContainer = styled.header`
         padding: 15px 10px;
     }
 `
+export const SearchWrapper = styled.div`
+    width: 100%;
+    @media (max-width: 1200px){
+        display: none;
+    }
+`
+
 export const ImgLogo = styled.img`
         width: 300px;
         height: auto;
@@ -41,11 +48,11 @@ export const ImgLogo = styled.img`
         }
 
         @media (max-width: 480px){
-            width: 230px;
+            width: 200px;
         }
 
         @media (max-width: 400px){
-            width: 200px;
+            width: 150px;
             padding: 0;
         }
 `
@@ -56,12 +63,20 @@ export const NavWrapper = styled.div`
     justify-self: flex-end;
     gap: 15px;
     position: relative;
+    order: 3;
 `
 
 export const BtnTransparent = styled.button`
     border: none;
     outline: none;
     background-color: transparent;
+`
+
+export const SearchBtn = styled.button`
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
 `
 
 export const ToggleMenuBtn = styled(BtnTransparent)`
@@ -94,7 +109,7 @@ export const ToggleMenuBtn = styled(BtnTransparent)`
     }
 
     @media (max-width: 967px){
-        order: 3;
+        order: 2;
         display: block;
     }
 

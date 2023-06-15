@@ -1,11 +1,12 @@
-import { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   ButtonTransparent,
+  SearchBarContainer,
   SearchBarForm,
   SearchInput,
   SearchList,
 } from "./UIStyles";
-import { FaSearch, FaBackspace } from "react-icons/fa";
+import { FaSearch, FaBackspace, FaWindowClose, FaMarkdown, FaBackward, FaRegWindowClose } from "react-icons/fa";
 import { AiFillCloseCircle } from "react-icons/ai";
 import SearchListMenu from "../Header/SearchListMenu/SearchListMenu";
 import { searchListMenu } from "../../data/SearchListMenu";
@@ -21,8 +22,15 @@ import {
   removeFilter as removeGenre,
 } from "../../redux/genreSlice/genreSlice";
 
-const SearchBar = () => {
+const SearchBar = React.forwardRef(({ setToggleSearchMenu, toggleSearchMenu, ref}) => {
   const dispatch = useDispatch();
+  const inputRef = useRef(null)
+
+  React.useEffect(()=>{
+    if(ref){
+      ref.current = inputRef.current
+    }
+  }, [ref])
 
   const { categories, selectedCategorie } = useSelector(
     (state) => state.categories
@@ -67,7 +75,7 @@ const SearchBar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(!value.length) return
+    if (!value.length) return;
 
     if (!filterSearch.length) {
       setToggleSearch(true);
@@ -76,51 +84,67 @@ const SearchBar = () => {
     setToggleSearch(false);
     setFilter(filterSearch);
 
-    filterSearch.map((search) => (
-      handleSearch(search.category)
-    ));
+    filterSearch.map((search) => handleSearch(search.category));
 
+    setToggleSearchMenu(!toggleSearchMenu)
     setValue("");
   };
   return (
-    <SearchBarForm onSubmit={handleSubmit} bordered={toggleSearch}>
-      <SearchInput
-        className="form-search"
-        placeholder="Buscar X Categoría o Género"
-        onChange={(e) => {
-          setValue(e.target.value);
-          if (value.length >= 2) {
-            setToggleSearch(true);
-            setFilter(filterSearch)
-          } else {
-            setToggleSearch(false);
-            return;
-          }
-        }}
-        value={value}
-        type="text"
-      />
-
-      {value && (
-        <ButtonTransparent onClick={cleanInput} type="reset">
-          <AiFillCloseCircle pointerEvents="none" size="18px" />
+    toggleSearchMenu && (
+      <SearchBarContainer onClick={(e)=>{
+        if(!e.target.classList.contains('search_bar')){
+          setToggleSearchMenu(!toggleSearchMenu)
+        }
+        return;
+      }}>
+        <ButtonTransparent style={{alignSelf: 'flex-end'}} 
+        onClick={()=> setToggleSearchMenu(!toggleSearchMenu)}>
+          <FaRegWindowClose pointerEvents='none' color="var(--white)" size='25px'/>
         </ButtonTransparent>
-      )}
-
-      <ButtonTransparent type="submit" onClick={handleSubmit}>
-        <FaSearch size="18px" />
-      </ButtonTransparent>
-
-      {toggleSearch && (
-        <SearchList>
-          <SearchListMenu
-            setToggleSearch={setToggleSearch}
+        <SearchBarForm onSubmit={handleSubmit} bordered={toggleSearch} className="search_bar">
+          <SearchInput
+            className="form-search search_bar"
+            placeholder="Buscar X Categoría o Género"
+            onChange={(e) => {
+              setValue(e.target.value);
+              if (value.length >= 2) {
+                setToggleSearch(true);
+                setFilter(filterSearch);
+              } else {
+                setToggleSearch(false);
+                return;
+              }
+            }}
             value={value}
-            filter={filter}
+            type="text"
+            ref={inputRef}
+            
           />
-        </SearchList>
-      )}
-    </SearchBarForm>
+
+          {value && (
+            <ButtonTransparent onClick={cleanInput} type="reset" className="search_bar">
+              <AiFillCloseCircle pointerEvents="none" size="18px" />
+            </ButtonTransparent>
+          )}
+
+          <ButtonTransparent type="submit" onClick={handleSubmit} className="search_bar">
+            <FaSearch size="18px" />
+          </ButtonTransparent>
+
+          {toggleSearch && (
+            <SearchList>
+              <SearchListMenu
+                setToggleSearch={setToggleSearch}
+                value={value}
+                filter={filter}
+                setToggleSearchMenu={setToggleSearchMenu}
+                toggleSearchMenu={toggleSearchMenu}
+              />
+            </SearchList>
+          )}
+        </SearchBarForm>
+      </SearchBarContainer>
+    )
   );
-};
+});
 export default SearchBar;

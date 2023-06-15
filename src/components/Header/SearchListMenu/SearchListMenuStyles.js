@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const SearchListMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 10px 0px;
+  padding: 10px 15px;
   width: 100%;
   overflow-y: scroll;
   max-height: 200px;
