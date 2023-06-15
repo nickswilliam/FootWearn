@@ -27,14 +27,19 @@ const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
+    if (window.innerWidth <= 768) {
+      setIsMobile(true);
+    }
+    const handleSize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleSize)
 
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+    return ()=>{
+      window.removeEventListener('resize', handleSize)
+    }
+  }, [window.innerWidth]);
 
   const { cartMenu, cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -56,7 +61,11 @@ const Header = () => {
   return (
     <HeaderContainer>
       {isMobile ? (
-        <ImgLogo src={LogoMobile} alt="logo-mobile" onClick={() => navigate("/")} />
+        <ImgLogo
+          src={LogoMobile}
+          alt="logo-mobile"
+          onClick={() => navigate("/")}
+        />
       ) : (
         <ImgLogo src={Logo} alt="logo" onClick={() => navigate("/")} />
       )}

@@ -5,16 +5,18 @@ export const SearchBarContainer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   position: absolute;
-  top: 80px;
+  top: 0px;
   left: 0;
   background-color: rgba(13, 14, 15, 0.5);
   backdrop-filter: blur(5px);
   padding: 10px 20px 30px 20px;
+  z-index: 4;
 `
 
 export const SearchBarForm = styled.form`
+  margin-top: 40px;
   display: flex;
   border: 1px solid var(--black);
   background-color: var(--white-menus);

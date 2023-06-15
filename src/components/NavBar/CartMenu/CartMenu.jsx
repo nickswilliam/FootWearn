@@ -20,10 +20,10 @@ import { useSelector } from "react-redux";
 import { FaCheckCircle, FaTrash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useRef } from "react";
+import { toggleHiddenMenu } from "../../../redux/user/userSlice";
 
 const CartMenu = () => {
   const navigate = useNavigate();
-  const initMenu = useRef(null)
   const { cartMenu, cartItems, shippingCost } = useSelector(
     (state) => state.cart
   );
@@ -43,7 +43,7 @@ const CartMenu = () => {
   };
 
   return (
-    <CartContainer show={cartMenu} ref={initMenu}>
+    <CartContainer show={cartMenu}>
       <CartTopContainer>
         <CloseCart onClick={handleCart} title="Cerrar Carrito" />
         <CartTitle>Tu compra</CartTitle>
@@ -84,7 +84,7 @@ const CartMenu = () => {
             title="Confirmar compra"
             onClick={() => {
               navigate("./checkout")
-              initMenu.current.scrollIntoView()
+              dispatch(toggleCartMenu())
             }}
           >
             <FaCheckCircle color="var(--white-menus)"/>
