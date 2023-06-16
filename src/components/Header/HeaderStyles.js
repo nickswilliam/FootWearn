@@ -76,7 +76,29 @@ export const SearchBtn = styled.button`
     border: none;
     outline: none;
     background-color: transparent;
+    position: relative;
     cursor: pointer;
+
+    &::before{
+        content: '';
+        position: absolute;
+        
+        top: 30px;
+        left: auto;
+        right: auto;
+        width: 25px;
+        height: 2px;
+        transform-origin: left;
+        background-color: var(--black);
+        transform: scaleX(0);
+        transition: all ease .2s;
+    }
+
+    &:hover::before{
+        transform: scaleX(1);
+        transition: all ease-in .15s;
+    }
+
 `
 
 export const ToggleMenuBtn = styled(BtnTransparent)`

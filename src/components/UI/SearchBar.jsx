@@ -22,16 +22,8 @@ import {
   removeFilter as removeGenre,
 } from "../../redux/genreSlice/genreSlice";
 
-const SearchBar = React.forwardRef(({ setToggleSearchMenu, toggleSearchMenu, ref}) => {
+const SearchBar = ({ setToggleSearchMenu, toggleSearchMenu}) => {
   const dispatch = useDispatch();
-  const inputRef = useRef(null)
-
-  React.useEffect(()=>{
-    if(ref){
-      ref.current = inputRef.current
-    }
-  }, [ref])
-
   const { categories, selectedCategorie } = useSelector(
     (state) => state.categories
   );
@@ -44,6 +36,12 @@ const SearchBar = React.forwardRef(({ setToggleSearchMenu, toggleSearchMenu, ref
   const filterSearch = searchListMenu.filter((search) =>
     search.name.toLowerCase().includes(value.toLowerCase())
   );
+
+  const inputRef = useRef()
+
+  useEffect(()=>{
+    inputRef.current.focus();
+  }, [])
 
   const filteredSearch = (category) => {
     if (genres.some((gen) => gen.category === category)) {
@@ -118,7 +116,6 @@ const SearchBar = React.forwardRef(({ setToggleSearchMenu, toggleSearchMenu, ref
             value={value}
             type="text"
             ref={inputRef}
-            
           />
 
           {value && (
@@ -146,5 +143,5 @@ const SearchBar = React.forwardRef(({ setToggleSearchMenu, toggleSearchMenu, ref
       </SearchBarContainer>
     )
   );
-});
+};
 export default SearchBar;

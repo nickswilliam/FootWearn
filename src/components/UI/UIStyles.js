@@ -46,6 +46,7 @@ export const SearchInput = styled.input`
   font-size: 18px;
 
   &::placeholder {
+    color: var(--black);
     text-overflow: ellipsis;
   }
 

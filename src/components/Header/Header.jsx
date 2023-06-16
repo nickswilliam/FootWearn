@@ -58,11 +58,11 @@ const Header = () => {
 
   const inputRef = useRef(null);
   const handleCart = () => {
-    if(toggleMenu){
-      setToggleMenu(!toggleMenu)
+    if (toggleMenu) {
+      setToggleMenu(!toggleMenu);
     }
-    if(!hiddenMenu){
-      dispatch(toggleHiddenMenu())
+    if (!hiddenMenu) {
+      dispatch(toggleHiddenMenu());
     }
     dispatch(toggleCartMenu());
   };
@@ -79,11 +79,13 @@ const Header = () => {
         <ImgLogo src={Logo} alt="logo" onClick={() => navigate("/")} />
       )}
 
-      <SearchBar
-        setToggleSearchMenu={setToggleSearchMenu}
-        toggleSearchMenu={toggleSearchMenu}
-        ref={inputRef}
-      />
+      {toggleSearchMenu && (
+        <SearchBar
+          setToggleSearchMenu={setToggleSearchMenu}
+          toggleSearchMenu={toggleSearchMenu}
+          ref={inputRef}
+        />
+      )}
 
       <NavWrapper>
         <SearchBtn
@@ -91,16 +93,16 @@ const Header = () => {
             if (inputRef.current) {
               inputRef.current.focus();
             }
-            if(!hiddenMenu){
-              dispatch(toggleHiddenMenu())
+            if (!hiddenMenu) {
+              dispatch(toggleHiddenMenu());
             }
-            if(toggleMenu){
-              setToggleMenu(!toggleMenu)
+            if (toggleMenu) {
+              setToggleMenu(!toggleMenu);
             }
             setToggleSearchMenu(!toggleSearchMenu);
           }}
         >
-          <FaSearch pointerEvents="none" size="25px" />
+          <FaSearch pointerEvents="none" size="22px" />
         </SearchBtn>
 
         <ToggleMenuBtn
@@ -116,7 +118,11 @@ const Header = () => {
         </ButtonCart>
       </NavWrapper>
 
-      <NavBar toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} toggleSearchMenu={toggleSearchMenu}/>
+      <NavBar
+        toggleMenu={toggleMenu}
+        setToggleMenu={setToggleMenu}
+        toggleSearchMenu={toggleSearchMenu}
+      />
       <CartMenu />
       {cartMenu && <Overlay onClick={handleCart} />}
     </HeaderContainer>

@@ -80,7 +80,6 @@ const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
     if (toggleSection) {
       setToggleSection(!toggleSection);
     }
-
   }, [pathname, toggleSearchMenu, !cartMenu]);
 
   const handleMenu = () => {
@@ -104,7 +103,7 @@ const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
           )}
         </NavLi>
         <NavLi onClick={handleMenuClick}>
-          <ModalUser />
+          <ModalUser toggleMenu={toggleMenu} setToggleMenu={setToggleMenu} />
 
           <FaUser
             size="18px"

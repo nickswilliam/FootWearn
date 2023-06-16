@@ -11,7 +11,7 @@ import {
   toggleHiddenMenu,
 } from "../../../redux/user/userSlice";
 
-const ModalUser = () => {
+const ModalUser = ({toggleMenu, setToggleMenu}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { hiddenMenu, currentUser } = useSelector((state) => state.user);
@@ -27,6 +27,7 @@ const ModalUser = () => {
             <ModalAnchors
               onClick={() => {
                 dispatch(toggleHiddenMenu());
+                setToggleMenu(!toggleMenu)
                 dispatch(setCurrentUser(null));
                 navigate('/')
               }}
