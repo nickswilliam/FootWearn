@@ -19,8 +19,6 @@ import { clearCart, toggleCartMenu } from "../../../redux/cartSlice/cartSice";
 import { useSelector } from "react-redux";
 import { FaCheckCircle, FaTrash } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import { useRef } from "react";
-import { toggleHiddenMenu } from "../../../redux/user/userSlice";
 
 const CartMenu = () => {
   const navigate = useNavigate();

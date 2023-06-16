@@ -12,6 +12,11 @@ justify-self: flex-start;
   border-radius: 5px;
   background-color: var(--white-menus);
   box-shadow: -4px 4px 6px var(--shadows), 4px 4px 6px var(--shadows);
+
+  @media (max-width: 530px){
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 export const LeftCartInfo = styled.div`
@@ -21,6 +26,10 @@ export const LeftCartInfo = styled.div`
   gap: 10px;
   align-items: flex-start;
   padding: 10px;
+
+  @media (max-width: 530px){
+    align-items: center;
+  }
 `;
 
 export const ImgItemCart = styled.img`
@@ -36,6 +45,10 @@ export const TitleItemCart = styled.h2`
   font-size: 22px;
   font-weight: 600;
   color: var(--dark-violet);
+
+  @media (max-width: 530px){
+    text-align: center;
+  }
 `;
 
 export const RightCartInfo = styled.div`

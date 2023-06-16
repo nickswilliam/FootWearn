@@ -25,6 +25,10 @@ export const CartContainer = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
+
+  @media (max-width: 967px){
+    width: 100%;
+  }
 `;
 export const CartTopContainer = styled.div`
   display: flex;
@@ -105,12 +109,32 @@ export const CartBottomTextLeft = styled.h3`
   color: var(--dark-violet);
   padding: 10px;
   text-shadow: 1px 1px 4px var(--shadows);
+
+  @media (max-width: 768px){
+    font-size: 28px;
+  }
+  @media (max-width: 480px){
+    font-size: 26px;
+  }
+  @media (max-width: 400px){
+    font-size: 24px;
+  }
 `;
 export const CartBottomTextRight = styled.h3`
   font-size: 30px;
   font-weight: 600;
   color: var(--dark-violet);
   text-shadow: 1px 1px 4px var(--shadows);
+
+  @media (max-width: 768px){
+    font-size: 28px;
+  }
+  @media (max-width: 480px){
+    font-size: 26px;
+  }
+  @media (max-width: 400px){
+    font-size: 24px;
+  }
 `;
 
 export const CartBottomBtns = styled.div`
@@ -119,7 +143,16 @@ export const CartBottomBtns = styled.div`
   width: 100%;
   align-items: center;
   gap: 20px;
+
+  @media (max-width: 768px){
+    gap: 15px;
+  }
+  @media (max-width: 480px){
+    gap: 10px;
+  }
 `;
+
+
 export const CartBtnConfirm = styled.button`
   display: flex;
   align-items: center;
@@ -143,5 +176,15 @@ export const CartBtnConfirm = styled.button`
   &:hover {
     opacity: 0.8;
     transition: all ease-out 0.3s;
+  }
+
+  @media (max-width: 768px){
+    padding: 10px 20px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 480px){
+    padding: 8px 15px;
+    font-size: 16px;
   }
 `;
