@@ -49,7 +49,7 @@ const CartMenu = () => {
 
       <CartCardContainer>
         {!cartItems.length ? (
-          <h2>*No hay productos en el carrito*</h2>
+          <h2 style={{textAlign: 'center'}}>*No hay productos en el carrito*</h2>
         ) : (
           cartItems.map((item) => <CartCard key={item.id} {...item} />)
         )}
