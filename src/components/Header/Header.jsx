@@ -10,7 +10,7 @@ import {
   SearchBtn,
 } from "./HeaderStyles";
 import Logo from "../../assets/imgs/logo/logo.png";
-import LogoMobile from "../../assets/imgs/footer/footw-logo.png";
+import LogoMobile from "../../assets/imgs/logo/logo01.png";
 import SearchBar from "../UI/SearchBar";
 import NavBar from "../NavBar/NavBar";
 import { FaBars, FaSearch } from "react-icons/fa";
