@@ -36,7 +36,10 @@ const Checkout = () => {
     (acc, item) => (acc += item.price * item.quantity),
     0
   );
-
+  const totalCartItemsQuantity = cartItems.reduce(
+    (acc, item) => (acc += item.quantity),
+    0
+  );
   const validationSchema = Yup.object({
     name: Yup.string()
       .min(4, "*Debe contener al menos 4 caracteres")
@@ -83,9 +86,9 @@ const Checkout = () => {
   };
 
   useEffect(() => {
-    document.title = "Confirmar compra";
+    document.title = `${totalCartItemsQuantity >= 1 ? `(${totalCartItemsQuantity}) `: '' }` + "Confirmar compra";
     checkoutRef.current.scrollIntoView();
-  });
+  }, []);
   return (
     <CheckoutContainBG ref={checkoutRef}>
       <CheckoutContainer>
