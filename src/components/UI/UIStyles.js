@@ -13,6 +13,10 @@ export const SearchBarContainer = styled.div`
   backdrop-filter: blur(2px);
   padding: 10px 20px 30px 20px;
   z-index: 4;
+
+  @media (max-width: 768px){
+    padding: 10px;
+  }
 `
 
 export const SearchBarForm = styled.form`
@@ -34,6 +38,13 @@ export const SearchBarForm = styled.form`
   &:hover {
     border: 1.5px double var(--black);
     transition: all ease-in 0.25s;
+  }
+
+  @media (max-width: 768px){
+    width: 90%;
+  }
+  @media (max-width: 480px){
+    width: 100%;
   }
 
 `;
