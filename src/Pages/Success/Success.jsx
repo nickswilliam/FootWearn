@@ -1,4 +1,3 @@
-import { FaCheckCircle } from "react-icons/fa";
 import {
   SuccesDivider,
   SuccesOrder,

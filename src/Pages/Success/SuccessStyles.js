@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import BackgroundBG from "../../assets/imgs/success/bg-img.png";
+import BackgroundBG from "../../assets/imgs/success/bg-img.jpg";
 import { FaCheckCircle } from "react-icons/fa";
 
 export const SuccessContainer = styled.div`
@@ -19,28 +19,61 @@ export const SuccessContainer = styled.div`
   h1 {
     font-family: "Under-Rated";
     color: var(--orange);
+    text-align: center;
     font-size: 40px;
     text-shadow: 1px 1px 1px var(--soft-black);
+
+    @media (max-width: 1024px) {
+      font-size: 36px;
+    }
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+    @media (max-width: 480px) {
+      font-size: 26px;
+    }
+    @media (max-width: 400px) {
+      font-size: 22px;
+    }
   }
 `;
 export const SuccesDivider = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 20px;
 
   h2 {
     color: var(--soft-black);
     font-size: 30px;
     text-shadow: -2px 0 1px var(--white);
+    text-align: center;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
+    @media (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 550px){
+    flex-wrap: wrap;
   }
 `;
 
 export const SuccessIcon = styled(FaCheckCircle)`
-  background-color: var(--white);
-  border-radius: 50%;
   font-size: 60px;
   color: var(--green-light);
   filter: drop-shadow(-3px 3px 2px var(--shadows));
+
+  @media (max-width: 768px){
+    font-size: 54px;
+  }
+
+  @media (max-width: 480px){
+    font-size: 50px;
+  }
 `;
 
 export const SuccesOrder = styled.div`
@@ -57,11 +90,36 @@ export const SuccesOrder = styled.div`
   h3 {
     font-size: 24px;
     color: var(--orange);
+
+    @media (max-width: 768px){
+      font-size: 22px;
+    }
+    @media (max-width: 480px){
+      font-size: 20px;
+    }
+    @media (max-width: 400px){
+      font-size: 18px;
+    }
   }
 
   span {
     color: var(--dark-violet);
     font-size: 24px;
+
+    @media (max-width: 768px){
+      font-size: 22px;
+    }
+    @media (max-width: 480px){
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 768px){
+    padding: 10px 15px;
+  }
+  @media (max-width: 480px){
+    padding: 10px;
+    min-width: fit-content;
   }
 `;
 export const SuccessBtns = styled.div`
@@ -72,14 +130,14 @@ export const SuccessBtns = styled.div`
   gap: 20px;
   padding: 20px;
 
-  button:nth-child(2){
+  button:nth-child(2) {
     background-color: var(--blue-light);
-    box-shadow: 0px 8px 1px #34A8EF;
+    box-shadow: 0px 8px 1px #34a8ef;
 
-    &:hover{
-        background-color: var(--blue);
-        transition: all ease .2s;
-        color: var(--grey-light);
+    &:hover {
+      background-color: var(--blue);
+      transition: all ease 0.2s;
+      color: var(--grey-light);
     }
   }
 
@@ -87,7 +145,7 @@ export const SuccessBtns = styled.div`
     outline: none;
     border: none;
     background-color: var(--green-light);
-    box-shadow: 0px 8px 1px #2EDC71;
+    box-shadow: 0px 8px 1px #2edc71;
     color: var(--white);
     padding: 20px 20px;
     border-radius: 5px;
@@ -96,12 +154,31 @@ export const SuccessBtns = styled.div`
     cursor: pointer;
     filter: drop-shadow(-4px 4px 6px var(--shadows));
 
-    transition: all ease-in .2s;
+    transition: all ease-in 0.2s;
 
-    &:hover{
-        background-color: #2EDC71;
-        transition: all ease .2s;
-        color: var(--grey-light);
+    &:hover {
+      background-color: #2edc71;
+      transition: all ease 0.2s;
+      color: var(--grey-light);
     }
+
+    @media (max-width: 768px){
+      padding: 10px 15px;
+      font-size: 18px;
+    }
+    @media (max-width: 480px){
+      padding: 10px;
+      font-size: 16px;
+    }
+    @media (max-width: 400px){
+      padding: 5px;
+    }
+  }
+
+  @media (max-width: 768px){
+    width: 60%;
+  }
+  @media (max-width: 480px){
+    width: 80%
   }
 `;
