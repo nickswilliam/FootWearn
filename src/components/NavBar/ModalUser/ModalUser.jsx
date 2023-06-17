@@ -10,32 +10,33 @@ import {
   setCurrentUser,
   toggleHiddenMenu,
 } from "../../../redux/user/userSlice";
+import {FaShopify, FaUserAlt} from "react-icons/fa";
+import {AiOutlineLogout} from 'react-icons/ai'
 
-const ModalUser = ({toggleMenu, setToggleMenu}) => {
+const ModalUser = ({ toggleMenu, setToggleMenu }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { hiddenMenu, currentUser } = useSelector((state) => state.user);
   return (
-    !hiddenMenu && currentUser && (
-      <ModalUserContainer>
-        <ModalUserTitle>
-          Bienvenida/o: {currentUser?.name}
-          <ModalDivAnchor>
-            <Link to='/orders'>
-              Mis Ordenes
-            </Link>
-            <ModalAnchors
-              onClick={() => {
-                dispatch(toggleHiddenMenu());
-                setToggleMenu(!toggleMenu)
-                dispatch(setCurrentUser(null));
-                navigate('/')
-              }}
-            >
-              Cerrar Sesión
-            </ModalAnchors>
-          </ModalDivAnchor>
-        </ModalUserTitle>
+    !hiddenMenu &&
+    currentUser && (
+      <ModalUserContainer
+        className={!hiddenMenu ? "openedModal" : "closedModal"}
+      >
+        <ModalUserTitle>Bienvenida/o: {currentUser?.name} <FaUserAlt size='16px'/> </ModalUserTitle>
+        <ModalDivAnchor>
+          <Link to="/orders"><FaShopify/> Mis Ordenes</Link>
+          <ModalAnchors
+            onClick={() => {
+              dispatch(toggleHiddenMenu());
+              setToggleMenu(!toggleMenu);
+              dispatch(setCurrentUser(null));
+              navigate("/");
+            }}
+          >
+            <AiOutlineLogout/>Cerrar Sesión
+          </ModalAnchors>
+        </ModalDivAnchor>
       </ModalUserContainer>
     )
   );

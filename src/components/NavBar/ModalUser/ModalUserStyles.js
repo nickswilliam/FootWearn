@@ -4,15 +4,15 @@ export const ModalUserContainer = styled.div`
   justify-self: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  width: 300px;
+  align-items: center;
+  width: 320px;
   padding: 15px 20px;
   background-color: var(--white-menus);
   border-radius: 10px;
   gap: 30px;
   position: absolute;
   top: 80px;
-  left: -20px;
+  left: -80px;
   z-index: 4;
   box-shadow: 8px 8px 8px var(--shadows), -8px 8px 8px var(--shadows);
   transform: translateX(-100px);
@@ -23,7 +23,7 @@ export const ModalUserContainer = styled.div`
     content: "";
     position: absolute;
     top: -15px;
-    left: 150px;
+    left: 100px;
     width: 0;
     height: 0;
     border-right: 15px solid transparent;
@@ -32,7 +32,7 @@ export const ModalUserContainer = styled.div`
     z-index: -1;
   }
 
-  /* @keyframes opened {
+  @keyframes openedModal {
         0%{
             transform: translateY(-100px) scaleY(0);
         }
@@ -41,7 +41,7 @@ export const ModalUserContainer = styled.div`
         }
     }
 
-    @keyframes closed {
+    @keyframes closedModal {
         0%{
             transform: translateY(0) scaleY(1);
         }
@@ -68,25 +68,36 @@ export const ModalUserContainer = styled.div`
         }
     }
     
-    &.openedSection{
-        animation: opened ease-in 0.2s forwards, fadeIn ease 0.15s forwards;
+    &.openedModal{
+        animation: openedModal ease-in 0.2s forwards, fadeIn ease 0.15s forwards;
     }
 
-    &.closedSection{
-        animation: closed ease-out 0.2s forwards, fadeOut ease 0.15s forwards;
+    &.closedModal{
+        animation: closedModal ease-out 0.2s forwards, fadeOut ease 0.15s forwards;
     }
- */
+
+    @media (max-width: 967px){
+      border-top: 1px solid var(--black);
+      border-radius: 0 0 10px 10px;
+      align-items: center;
+      width: 100%;
+      left: 0;
+      right: 0;
+
+      &::before{
+        display: none;
+      }
+    }
 `;
 
 export const ModalUserTitle = styled.h2`
   border-bottom: 1px solid var(--grey-dark);
   padding: 5px;
   color: var(--orange);
-  font-size: 20px;
+  font-size: 22px;
 `;
 
 export const ModalDivAnchor = styled.div`
-  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -95,6 +106,10 @@ export const ModalDivAnchor = styled.div`
   a {
     color: var(--soft-black);
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
 
     &:hover{
       color: var(--grey-dark);
@@ -107,7 +122,10 @@ export const ModalAnchors = styled.p`
   font-weight: 600;
   font-size: 18px;
   cursor: pointer;
-  padding-bottom: 3px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
   &:hover {
     color: var(--grey-dark);
