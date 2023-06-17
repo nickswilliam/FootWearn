@@ -35,6 +35,10 @@ export const SliderHeroContainer = styled.div`
     @media (max-width: 350px){
         max-width: 320px;
     }
+
+    @media (max-width: 320px){
+        max-width: 300px;
+    }
 `
 
 export const SwiperContainer = styled(Swiper)`

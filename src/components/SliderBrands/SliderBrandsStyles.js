@@ -32,4 +32,8 @@ export const SwiperContainer = styled(Swiper)`
     @media (max-width: 480px){
         max-width: 320px;
     }
+
+    @media (max-width: 400px){
+        max-width: 300px;
+    }
 `

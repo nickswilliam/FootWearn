@@ -19,9 +19,8 @@ import { CartCard } from "../../components/CartCard/CartCard";
 import { useEffect, useRef } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { FaLeaf, FaTrash } from "react-icons/fa";
-import { clearCart, toggleCartMenu } from "../../redux/cartSlice/cartSice";
-import { ButtonTransparent } from "../../components/UI/UIStyles";
+import { FaTrash } from "react-icons/fa";
+import { clearCart } from "../../redux/cartSlice/cartSice";
 import { useNavigate } from "react-router-dom";
 import { orderStart, orderSuccess } from "../../redux/ordersSlice/ordersSlice";
 import { CartBtnConfirm } from "../../components/NavBar/CartMenu/CartMenuStyles";
@@ -31,7 +30,6 @@ const Checkout = () => {
   const loading = useSelector((state) => state.orders.loading);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const cartMenu = useSelector((state) => state.cart.cartMenu);
 
   const { shippingCost, cartItems } = useSelector((state) => state.cart);
   const totalPrice = cartItems.reduce(
@@ -192,6 +190,7 @@ const Checkout = () => {
             </BottomPriceDiv>
           </RightContainer>
         </ContainerVertical>
+        
       </CheckoutContainer>
     </CheckoutContainBG>
   );
