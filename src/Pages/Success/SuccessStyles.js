@@ -36,6 +36,25 @@ export const SuccessContainer = styled.div`
       font-size: 22px;
     }
   }
+
+  @media (max-width: 1024px){
+    padding: 40px 60px;
+  }
+  @media (max-width: 768px){
+    padding: 40px;
+    gap: 30px;
+  }
+
+  @media (max-width: 480px){
+    padding: 30px;
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+
+  @media (max-width: 400px){
+    padding: 20px;
+    gap: 10px;
+  }
 `;
 export const SuccesDivider = styled.div`
   display: flex;
