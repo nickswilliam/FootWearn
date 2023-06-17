@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import BackgroundBG from "../../assets/imgs/login/bg-img.png";
+import BackgroundBG from "../../assets/imgs/login/bg-img.jpg";
 
 export const LoginWrapper = styled.div`
   margin-top: 80px;
@@ -7,7 +7,7 @@ export const LoginWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  padding: 40px 80px 80px 80px;
+  padding: 40px 60px 80px 60px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -29,18 +29,18 @@ export const LoginForm = styled.form`
     align-items: center;
     gap: 20px;
     background-color: var(--white-menus);
-    box-shadow: -6px 6px 6px var(--shadows);
+    box-shadow: -6px 6px 6px var(--shadows), 6px 6px 6px var(--shadows);
     max-width: 500px;
     width: 100%;
 
     p{
         font-size: 16px;
-        color: var(--blue-light);
+        color: var(--dark-violet);
     }
 
     p a {
         margin-left: 8px;
-        color:  var(--blue);
+        color:  var(--dark-violet);
         font-weight: 600;
     }
 `
@@ -53,12 +53,12 @@ export const LoginContainInput = styled.div`
     align-items: center;
 
     p{
-        color: var(--red);
+        color: var(--dark-violet);
     }
 `
 
 export const LoginLabel = styled.label`
-    color: var(--blue);
+    color: var(--dark-violet);
     font-size: 20px;
     font-weight: 600;
 
@@ -71,12 +71,12 @@ export const LoginInput = styled.input`
     width: 100%;
     border: none;
     outline: none;
-    border-bottom: 2px solid var(--light-blue);
+    border-bottom: 2px solid #112fb050;
     position: relative;
     transition: all ease .15s;
 
     &:focus{
-        border-color: var(--blue);
+        border-color: var(--dark-violet);
         transition: all ease .15s;
     }
 
@@ -103,15 +103,15 @@ export const LoginBtn = styled.input`
     padding: 10px 20px;
     font-weight: 600;
     font-size: 22px;
-    border: 1px solid var(--light-blue);
-    background-color: var(--blue-light);
+    border: 1px solid var(--dark-violet);
+    background-color: var(--dark-violet);
     color: var(--white);
     cursor: pointer;
 
     transition: all ease .2s;
 
     &:hover{
-        background-color: var(--blue);
+        background-color: #112fb0;
         color: var(--grey-light);
         transition: all ease-in .2s;
     }

@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import BackgroundBG from "../../assets/imgs/register/bg-img.png";
+import BackgroundBG from "../../assets/imgs/register/bg-img.jpg";
 
 export const RegisterWrapper = styled.div`
   margin-top: 80px;
@@ -7,7 +7,7 @@ export const RegisterWrapper = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  padding: 40px 80px 80px 80px;
+  padding: 40px 30px 60px 30px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ export const RegisterForm = styled.form`
     align-items: center;
     gap: 20px;
     background-color: var(--white-menus);
-    box-shadow: -6px 6px 6px var(--shadows);
+    box-shadow: -6px 6px 6px var(--shadows), 6px 6px 6px var(--shadows);
     max-width: 500px;
     width: 100%;
 
