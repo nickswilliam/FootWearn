@@ -65,10 +65,16 @@ const Checkout = () => {
 
       setTimeout(() => {
         navigate("/success");
-        dispatch(orderSuccess({users: values, cartItems, shippingCost ,date: Date.now()}));
+        dispatch(
+          orderSuccess({
+            users: values,
+            cartItems,
+            shippingCost,
+            date: Date.now(),
+          })
+        );
         dispatch(clearCart());
       }, 2500);
-      
     },
   });
 
@@ -79,11 +85,10 @@ const Checkout = () => {
   useEffect(() => {
     document.title = "Confirmar compra";
     checkoutRef.current.scrollIntoView();
-    
   });
   return (
-    <CheckoutContainBG>
-      <CheckoutContainer ref={checkoutRef}>
+    <CheckoutContainBG ref={checkoutRef}>
+      <CheckoutContainer>
         <ContainerVertical>
           <h1>INGRESA TUS DATOS</h1>
 
@@ -156,11 +161,15 @@ const Checkout = () => {
           <RightContainer>
             {!cartItems.length ? null : (
               <CartBtnConfirm
-                style={{ alignSelf: "center", width: '95%'}}
+                style={{ alignSelf: "center", width: "95%" }}
                 onClick={clearItemsToCart}
                 title="Vaciar carrito"
               >
-                <FaTrash pointerEvents="none" color="var(--black)" size="22px" />
+                <FaTrash
+                  pointerEvents="none"
+                  color="var(--black)"
+                  size="22px"
+                />
                 Vaciar carrito
               </CartBtnConfirm>
             )}
@@ -173,15 +182,19 @@ const Checkout = () => {
             </ItemsCartContainer>
 
             <BottomPriceDiv>
-              <SubtotalDiv>
-                <p>Subtotal:</p>
-                <span>${totalPrice}</span>
-              </SubtotalDiv>
+              {cartItems.length >= 1 && (
+                <>
+                  <SubtotalDiv>
+                    <p>Subtotal:</p>
+                    <span>${totalPrice}</span>
+                  </SubtotalDiv>
 
-              <SubtotalDiv>
-                <p>Envío:</p>
-                <span>${shippingCost}</span>
-              </SubtotalDiv>
+                  <SubtotalDiv>
+                    <p>Envío:</p>
+                    <span>${shippingCost}</span>
+                  </SubtotalDiv>
+                </>
+              )}
 
               <TotalPriceDiv>
                 <h4>Total:</h4>
@@ -190,7 +203,6 @@ const Checkout = () => {
             </BottomPriceDiv>
           </RightContainer>
         </ContainerVertical>
-        
       </CheckoutContainer>
     </CheckoutContainBG>
   );
