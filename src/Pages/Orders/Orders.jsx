@@ -4,6 +4,7 @@ import {
   NoOrderText,
   OrderBGContainer,
   OrdersContainer,
+  OrdersListWrapper,
   OrdersLists,
   RightContainer,
 } from "./OrdersStyles";
@@ -15,11 +16,11 @@ import { clearOrders } from "../../redux/ordersSlice/ordersSlice";
 
 const Orders = () => {
   const dispatch = useDispatch();
-  const ordersRef = useRef()
+  const ordersRef = useRef();
   const ordersList = useSelector((state) => state.orders.ordersList);
   useEffect(() => {
     document.title = "Mis Ordenes";
-    ordersRef.current.scrollIntoView()
+    ordersRef.current.scrollIntoView();
   }, []);
 
   const [toggleDetail, setToggleDetail] = useState(false);
@@ -32,7 +33,6 @@ const Orders = () => {
       <OrdersContainer>
         <LeftContainer>
           <h1>HISTORIAL DE PEDIDOS:</h1>
-
           {!ordersList.length ? null : (
             <button onClick={handleClean}>
               <FaBroom /> Limpiar el historial
@@ -43,14 +43,16 @@ const Orders = () => {
             {!ordersList.length ? (
               <NoOrderText>No hay ninguna orden registrada.</NoOrderText>
             ) : (
-              ordersList.map((order) => (
-                <OrdersCardResume
-                  key={order.orderID}
-                  {...order}
-                  setToggleDetail={setToggleDetail}
-                  toggleDetail={toggleDetail}
-                />
-              ))
+              <OrdersListWrapper>
+                {ordersList.map((order) => (
+                  <OrdersCardResume
+                    key={order.orderID}
+                    {...order}
+                    setToggleDetail={setToggleDetail}
+                    toggleDetail={toggleDetail}
+                  />
+                ))}
+              </OrdersListWrapper>
             )}
           </OrdersLists>
         </LeftContainer>

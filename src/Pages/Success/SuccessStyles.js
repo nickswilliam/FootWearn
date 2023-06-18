@@ -42,18 +42,18 @@ export const SuccessContainer = styled.div`
   }
   @media (max-width: 768px){
     padding: 40px;
-    gap: 30px;
+    justify-content: center;
+    gap: 70px;
   }
 
   @media (max-width: 480px){
     padding: 30px;
-    gap: 20px;
-    justify-content: space-evenly;
+    gap: 50px;
+    justify-content: center;
   }
 
   @media (max-width: 400px){
     padding: 20px;
-    gap: 10px;
   }
 `;
 export const SuccesDivider = styled.div`

@@ -7,13 +7,11 @@ import {
 import { discountOff } from "../../utils/percentaje";
 
 const OrderItemCard = ({
-  id,
   title,
   price,
   imgs,
   discount,
   sizeSelect,
-  description,
   quantity,
 }) => {
   return (

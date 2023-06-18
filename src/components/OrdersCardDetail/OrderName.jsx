@@ -1,4 +1,4 @@
-import { FaMap, FaMapMarked, FaMapPin, FaMapSigns, FaPhone } from "react-icons/fa";
+import { FaMapPin, FaMapSigns, FaPhone } from "react-icons/fa";
 import {
   OrderNameBot,
   OrderNameContainer,

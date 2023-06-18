@@ -8,7 +8,7 @@ export const ModalUserContainer = styled.div`
   width: 320px;
   padding: 15px 0px;
   background-color: var(--white-menus);
-  border-radius: 10px;
+  border-radius: 5px;
   gap: 10px;
   position: absolute;
   top: 80px;
@@ -77,7 +77,7 @@ export const ModalUserContainer = styled.div`
 
   @media (max-width: 967px) {
     border-top: 1px solid var(--black);
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 5px 5px;
     align-items: center;
     width: 100%;
     left: 0;

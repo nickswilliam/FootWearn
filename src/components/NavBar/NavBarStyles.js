@@ -89,14 +89,14 @@ export const LiMenu = styled.ul`
   align-items: center;
   padding: 10px 0;
   background-color: var(--white-menus);
-  border: 1px solid var(--grey-dark);
+  border: none;
   border-radius: 5px;
   gap: 5px;
   position: absolute;
   top: 80px;
   left: -2px;
   z-index: 4;
-  box-shadow: 8px 8px 8px var(--shadows);
+  box-shadow: 8px 8px 8px var(--shadows), -8px 8px 8px var(--shadows);
   transition: all ease-in 0.35s;
 
   &::before {

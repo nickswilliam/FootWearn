@@ -1,9 +1,13 @@
 import { FaSortDown } from "react-icons/fa";
-import { OrderItemsContainer, OrderItemsTitle } from "./OrdersCardDetailStyles";
+import {
+  OrderItemCardWrapper,
+  OrderItemsContainer,
+  OrderItemsTitle,
+} from "./OrdersCardDetailStyles";
 import { useState } from "react";
 import OrderItemCard from "./OrderItemCard";
 
-const OrderItems = ({ cartItems, shippingCost }) => {
+const OrderItems = ({ cartItems }) => {
   const [toggleDetail, setToggleDetail] = useState(false);
 
   return (
@@ -15,7 +19,14 @@ const OrderItems = ({ cartItems, shippingCost }) => {
           pointerEvents="none"
         />
       </OrderItemsTitle>
-      {toggleDetail && cartItems.map((item) => <OrderItemCard key={item.id} {...item} />)}
+
+      {toggleDetail && (
+        <OrderItemCardWrapper>
+          {cartItems.map((item) => (
+            <OrderItemCard key={item.id} {...item} />
+          ))}
+        </OrderItemCardWrapper>
+      )}
     </OrderItemsContainer>
   );
 };
