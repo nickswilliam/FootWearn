@@ -12,7 +12,7 @@ import {
   CartTopContainer,
   CloseCart,
   ShipOrSubDiv,
-  ShipOrSubTextLeft
+  ShipOrSubTextLeft,
 } from "./CartMenuStyles";
 import { useDispatch } from "react-redux";
 import { clearCart, toggleCartMenu } from "../../../redux/cartSlice/cartSice";
@@ -31,6 +31,7 @@ const CartMenu = () => {
     0
   );
 
+  const { currentUser } = useSelector((state) => state.user);
   const handleCart = () => {
     dispatch(toggleCartMenu());
   };
@@ -49,7 +50,9 @@ const CartMenu = () => {
 
       <CartCardContainer>
         {!cartItems.length ? (
-          <h2 style={{textAlign: 'center'}}>*No hay productos en el carrito*</h2>
+          <h2 style={{ textAlign: "center" }}>
+            *No hay productos en el carrito*
+          </h2>
         ) : (
           cartItems.map((item) => <CartCard key={item.id} {...item} />)
         )}
@@ -77,15 +80,16 @@ const CartMenu = () => {
       {cartItems.length !== 0 && (
         <CartBottomBtns>
           <CartBtnConfirm
-          style={{color: 'var(--white-menus)'}}
+            style={{ color: "var(--white-menus)" }}
             addcart="true"
             title="Confirmar compra"
             onClick={() => {
-              navigate("./checkout")
-              dispatch(toggleCartMenu())
+              !currentUser && alert('Debes tener una cuenta para confirmar tu compra')
+              navigate("./checkout");
+              dispatch(toggleCartMenu());
             }}
           >
-            <FaCheckCircle color="var(--white-menus)"/>
+            <FaCheckCircle color="var(--white-menus)" />
             Confirmar pedido
           </CartBtnConfirm>
 
