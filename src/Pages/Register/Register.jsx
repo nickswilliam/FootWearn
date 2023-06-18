@@ -67,16 +67,16 @@ const Register = () => {
     },
     validationSchema,
     onSubmit: (values, actions) => {
+      registerRef.current.scrollIntoView();
       dispatch(userExist(values.email));
-      console.log(isUser, 'existe?');
       if (isUser) {
         dispatch(setCurrentUser(null));
-        setToggleRegister(!toggleRegister)
+        setToggleRegister(!toggleRegister);
         setToggleMsg("*El mail corresponde a un usuario existente");
 
-        setTimeout(()=>{
-          setToggleRegister(false)
-        }, 2500)
+        setTimeout(() => {
+          setToggleRegister(false);
+        }, 2500);
         return;
       } else {
         dispatch(setCurrentUser(values));
@@ -92,7 +92,11 @@ const Register = () => {
     <RegisterWrapper ref={registerRef}>
       <RegisterTitle>REGISTRATE</RegisterTitle>
       {toggleRegister && (
-        <h2 style={{ color: "var(--red)" }}>{toggleMsg}</h2>
+        <h2
+          style={{ color: "var(--red)", fontSize: "20px", textAlign: "center" }}
+        >
+          {toggleMsg}
+        </h2>
       )}
       <RegisterForm onSubmit={formik.handleSubmit}>
         {register.map((item) => (

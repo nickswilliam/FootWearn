@@ -13,13 +13,35 @@ export const LoginWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+
+  @media (max-width: 768px){
+    padding: 40px 20px 60px 20px;
+  }
+
+  @media (max-width: 480px){
+    padding: 40px 10px 60px 10px;
+  }
 `;
 
 export const LoginTitle = styled.h1`
   font-size: 48px;
   color: var(--dark-violet);
   text-shadow: -1px 0 1px var(--white);
+  text-align: center;
   font-family: "Under-Rated";
+
+  @media (max-width: 1024px){
+    font-size: 42px;
+  }
+  @media (max-width: 768px){
+    font-size: 38px;
+  }
+  @media (max-width: 480px){
+    font-size: 34px;
+  }
+  @media (max-width: 400px){
+    font-size: 30px;
+  }
 `;
 
 export const LoginForm = styled.form`
@@ -36,12 +58,20 @@ export const LoginForm = styled.form`
     p{
         font-size: 16px;
         color: var(--dark-violet);
+        text-align: center;
     }
 
     p a {
         margin-left: 8px;
         color:  var(--dark-violet);
         font-weight: 600;
+    }
+
+    @media (max-width: 768px){
+        padding: 20px;
+    }
+    @media (max-width: 480px){
+        padding: 15px;
     }
 `
 
@@ -62,6 +92,12 @@ export const LoginLabel = styled.label`
     font-size: 20px;
     font-weight: 600;
 
+    @media (max-width: 768px){
+        font-size: 18px;
+    }
+    @media (max-width: 480px){
+        font-size: 16px;
+    }
 `
 export const LoginInput = styled.input`
     text-align: center;
@@ -94,6 +130,13 @@ export const LoginInput = styled.input`
         transition: ease-in .15s;
         color: var(--dark-violet);
     }
+
+    @media (max-width: 768px){
+        font-size: 18px;
+    }
+    @media (max-width: 480px){
+        font-size: 16px;
+    }
 `
 export const LoginBtn = styled.input`
     text-align: center;
@@ -114,6 +157,13 @@ export const LoginBtn = styled.input`
         background-color: #112fb0;
         color: var(--grey-light);
         transition: all ease-in .2s;
+    }
+
+    @media (max-width: 768px){
+        font-size: 20px;
+    }
+    @media (max-width: 480px){
+        font-size: 18px;
     }
 
 `

@@ -13,6 +13,14 @@ export const RegisterWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 30px;
+
+  @media (max-width: 768px){
+    padding: 40px 20px 60px 20px;
+  }
+
+  @media (max-width: 480px){
+    padding: 40px 10px 60px 10px;
+  }
 `;
 
 export const RegisterTitle = styled.h1`
@@ -20,6 +28,19 @@ export const RegisterTitle = styled.h1`
   color: var(--orange);
   text-shadow: -1px 0 1px var(--white);
   font-family: "Under-Rated";
+
+  @media (max-width: 1024px){
+    font-size: 42px;
+  }
+  @media (max-width: 768px){
+    font-size: 38px;
+  }
+  @media (max-width: 480px){
+    font-size: 34px;
+  }
+  @media (max-width: 400px){
+    font-size: 30px;
+  }
 `;
 
 export const RegisterForm = styled.form`
@@ -36,12 +57,20 @@ export const RegisterForm = styled.form`
     p{
         font-size: 16px;
         color: var(--orange);
+        text-align: center;
     }
 
     p a {
         margin-left: 8px;
         color:  var(--orange);
         font-weight: 600;
+    }
+
+    @media (max-width: 768px){
+        padding: 20px;
+    }
+    @media (max-width: 480px){
+        padding: 15px;
     }
 `
 
@@ -61,6 +90,13 @@ export const RegisterLabel = styled.label`
     color: var(--orange);
     font-size: 20px;
     font-weight: 600;
+
+    @media (max-width: 768px){
+        font-size: 18px;
+    }
+    @media (max-width: 480px){
+        font-size: 16px;
+    }
 
 `
 export const RegisterInput = styled.input`
@@ -94,6 +130,13 @@ export const RegisterInput = styled.input`
         transition: ease-in .15s;
         color: var(--blue);
     }
+
+    @media (max-width: 768px){
+        font-size: 18px;
+    }
+    @media (max-width: 480px){
+        font-size: 16px;
+    }
 `
 export const RegisterBtn = styled.input`
     margin-top: 40px;
@@ -113,6 +156,13 @@ export const RegisterBtn = styled.input`
         background-color: var(--orange2);
         color: var(--grey-light);
         transition: all ease-in .2s;
+    }
+
+    @media (max-width: 768px){
+        font-size: 20px;
+    }
+    @media (max-width: 480px){
+        font-size: 18px;
     }
 
 `
