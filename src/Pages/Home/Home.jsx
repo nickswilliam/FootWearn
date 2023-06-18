@@ -88,7 +88,7 @@ const Home = () => {
 
         <ProductsWrapper ref={productsRef} id="products">
           <ProductsTitle>Productos</ProductsTitle>
-          <CardsProducts />
+          <CardsProducts doScroll={doScroll}/>
         </ProductsWrapper>
       </AllStoreWrapper>
 

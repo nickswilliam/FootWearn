@@ -28,8 +28,8 @@ const ModalUser = ({ toggleMenu, setToggleMenu }) => {
           <Link to="/orders"><FaShopify/> Mis Ordenes</Link>
           <ModalAnchors
             onClick={() => {
-              dispatch(toggleHiddenMenu());
               setToggleMenu(!toggleMenu);
+              dispatch(toggleHiddenMenu());
               dispatch(setCurrentUser(null));
               navigate("/");
             }}

@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { INITIAL_LIMIT } from "../../utils/constants";
 
-const CardsProducts = () => {
+const CardsProducts = ({ doScroll }) => {
   let { products } = useSelector((state) => state.products);
   const [currentPage, setCurrentPage] = useState(1);
   const [limit, setLimit] = useState(INITIAL_LIMIT);
@@ -87,7 +87,10 @@ const CardsProducts = () => {
               <PagedBox
                 key={page}
                 className={currentPage === page && "active"}
-                onClick={() => setPage(page)}
+                onClick={() => {
+                  setPage(page);
+                  doScroll();
+                }}
               >
                 {page}
               </PagedBox>
