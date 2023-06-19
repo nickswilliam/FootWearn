@@ -6,6 +6,7 @@ import Checkout from "../Pages/Checkout/Checkout";
 import Success from "../Pages/Success/Success";
 import Orders from "../Pages/Orders/Orders";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
+import NotFound from "../Pages/NotFound/NotFound";
 const Routes = () => {
   return (
     <RoutesReact>
@@ -23,7 +24,7 @@ const Routes = () => {
       <Route
         path="/orders"
         element={
-          <ProtectedRoute redirectTo='/login'>
+          <ProtectedRoute redirectTo="/login">
             <Orders />
           </ProtectedRoute>
         }
@@ -37,6 +38,8 @@ const Routes = () => {
           </ProtectedRoute>
         }
       />
+
+      <Route path="*" element={<NotFound />} />
     </RoutesReact>
   );
 };
