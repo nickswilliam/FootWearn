@@ -130,13 +130,6 @@ export const RegisterInput = styled.input`
         transition: ease-in .15s;
         color: var(--blue);
     }
-
-    @media (max-width: 768px){
-        font-size: 18px;
-    }
-    @media (max-width: 480px){
-        font-size: 16px;
-    }
 `
 export const RegisterBtn = styled.input`
     margin-top: 40px;

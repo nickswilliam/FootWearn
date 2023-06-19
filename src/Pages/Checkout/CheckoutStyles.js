@@ -160,9 +160,7 @@ export const InputContainer = styled.div`
     @media (max-width: 768px){
       font-size: 18px;
     }
-    @media (max-width: 480px){
-      font-size: 16px;
-    }
+  
   }
 
   input:focus {

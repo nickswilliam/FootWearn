@@ -83,7 +83,7 @@ export const LoginContainInput = styled.div`
     align-items: center;
 
     p{
-        color: var(--dark-violet);
+        color: var(--red);
     }
 `
 
@@ -131,12 +131,6 @@ export const LoginInput = styled.input`
         color: var(--dark-violet);
     }
 
-    @media (max-width: 768px){
-        font-size: 18px;
-    }
-    @media (max-width: 480px){
-        font-size: 16px;
-    }
 `
 export const LoginBtn = styled.input`
     text-align: center;
