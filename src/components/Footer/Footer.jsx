@@ -16,10 +16,6 @@ import {
   SecureText,
   FooterLink,
 } from "./FooterStyles";
-import PaymentsWayImg from "../../assets/imgs/footer/pay-ways.png";
-import SecurePayImg from "../../assets/imgs/footer/secure-pay.png";
-import FiscalImg from "../../assets/imgs/footer/data-fiscal.jpg";
-import FooterLogo from "../../assets/imgs/footer/footw-logo.png";
 
 const Footer = () => {
   return (
@@ -28,14 +24,14 @@ const Footer = () => {
         <LeftFooterContainer>
           <PaymentText>Medios de pago:</PaymentText>
 
-          <PaymentImg src={PaymentsWayImg} />
+          <PaymentImg src='https://res.cloudinary.com/dymyb2f2i/image/upload/v1691441241/footer/pay-ways_unpfw2.png' />
         </LeftFooterContainer>
 
         <MidLeftFooterContainer>
           <MidFooterContainer>
             <SecureText>Compra segura</SecureText>
 
-            <SecureImg src={SecurePayImg} />
+            <SecureImg src='https://res.cloudinary.com/dymyb2f2i/image/upload/v1691441241/footer/secure-pay_ujjxkx.png' />
           </MidFooterContainer>
 
           <ParagraphText>
@@ -44,11 +40,11 @@ const Footer = () => {
           </ParagraphText>
         </MidLeftFooterContainer>
 
-        <RightFiscalImg src={FiscalImg} />
+        <RightFiscalImg src='https://res.cloudinary.com/dymyb2f2i/image/upload/v1691441241/footer/data-fiscal_aoyef8.jpg' />
       </FooterTopContainer>
 
       <FooterBottomContainer>
-        <FootterBottomLogo src={FooterLogo} />
+        <FootterBottomLogo src='https://res.cloudinary.com/dymyb2f2i/image/upload/v1691441240/footer/footw-logo_qo0x8w.png' />
         <FooterTextCopy>
           © Copyright Footwearn! 2023 - All rights reserved
         </FooterTextCopy>

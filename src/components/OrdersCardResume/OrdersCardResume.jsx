@@ -4,7 +4,6 @@ import {
   OrdersResumeContainer,
   RightContainer,
 } from "./OrdersCardResumeStyles";
-import IconOrder from "../../assets/imgs/footer/footw-logo.png";
 import { FaCircle, FaInfoCircle } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { selectOrder } from "../../redux/ordersSlice/ordersSlice";
@@ -44,7 +43,7 @@ const OrdersCardResume = ({
       title={`Detalles del pedido: ${orderID}`}
       onClick={handleDetail}
     >
-      <img src={IconOrder} alt="icon-order" />
+      <img src='https://res.cloudinary.com/dymyb2f2i/image/upload/v1691441240/footer/footw-logo_qo0x8w.png' alt="icon-order" />
 
       <LeftContainer>
         <h2>Pedido: #{orderID}</h2>

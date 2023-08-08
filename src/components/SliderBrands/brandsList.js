@@ -1,134 +1,107 @@
-import adidasLogo from '../../assets/imgs/hero/brands/adidas-logo.png'
-import araquina from '../../assets/imgs/hero/brands/araquina-logo.png'
-import asicsLogo from '../../assets/imgs/hero/brands/asics-logo.png'
-import cheeky from '../../assets/imgs/hero/brands/cheeky.png'
-import fila from '../../assets/imgs/hero/brands/fila-logo.png'
-import footy from '../../assets/imgs/hero/brands/footy-logo.png'
-import gummi from '../../assets/imgs/hero/brands/gummi-logo.png'
-import jaguar from '../../assets/imgs/hero/brands/jaguar-logo.png'
-import kappa from '../../assets/imgs/hero/brands/kappa-logo.png'
-import kevingston from '../../assets/imgs/hero/brands/kevingston-logo.png'
-import lacoste from '../../assets/imgs/hero/brands/lacoste-logo.png'
-import ladyStork from '../../assets/imgs/hero/brands/lady-stork-logo.png'
-import laGear from '../../assets/imgs/hero/brands/la-gear-logo.png'
-import minisKids from '../../assets/imgs/hero/brands/minis-kids.png'
-import missRock from '../../assets/imgs/hero/brands/miss-rock.png'
-import Moleca from '../../assets/imgs/hero/brands/moleca.png'
-import nobaLogo from '../../assets/imgs/hero/brands/noba-logo.png'
-import olimpikus from '../../assets/imgs/hero/brands/olimpikus-logo.png'
-import poloLogo from '../../assets/imgs/hero/brands/polo-logo.png'
-import pumaLogo from '../../assets/imgs/hero/brands/puma-logo.png'
-import skaylap from '../../assets/imgs/hero/brands/skaylap-logo.png'
-import stalaCo from '../../assets/imgs/hero/brands/stalla-logo.png'
-import topperLogo from '../../assets/imgs/hero/brands/topper-logo.png'
-import urbanCow from '../../assets/imgs/hero/brands/urbancow-logo.png'
-import vizzanoLogo from '../../assets/imgs/hero/brands/vizzano-logo.png'
-import zeuzLogo from '../../assets/imgs/hero/brands/zeuz-logo.png'
-
 export const brands = [
     {
         brand: 'Adidas',
-        img: adidasLogo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440467/brands/adidas-logo_ogoy78.png'
     },
     {
         brand: 'Araquina',
-        img: araquina
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440467/brands/araquina-logo_t2r7ie.png'
     },
     {
         brand: 'Asics',
-        img: asicsLogo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440467/brands/asics-logo_gg89r6.png'
     },
     {
         brand: 'cheeky',
-        img: cheeky
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440467/brands/cheeky_cm2uwn.png'
     },
     {
         brand: 'fila',
-        img: fila
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440467/brands/fila-logo_iv5gil.png'
     },
     {
         brand: 'footy',
-        img: footy
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/footy-logo_z2qvyb.png'
     },
     {
         brand: 'gummi',
-        img: gummi
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/gummi-logo_nnmumo.png'
     },
     {
         brand: 'jaguar',
-        img: jaguar
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/jaguar-logo_lc6v8n.png'
     },
     {
         brand: 'kappa',
-        img: kappa
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/kappa-logo_hbix4w.png'
     },
     {
         brand: 'kevingston',
-        img: kevingston
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/kevingston-logo_e75enc.png'
     },
     {
         brand: 'lacoste',
-        img: lacoste
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/lacoste-logo_l7asbq.png'
     },
     {
         brand: 'lady stork',
-        img: ladyStork
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/lady-stork-logo_afrutk.png'
     },
     {
         brand: 'la gear',
-        img: laGear
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/la-gear-logo_egipwf.png'
     },
     {
         brand: 'minis kids',
-        img: minisKids
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440468/brands/minis-kids_wbpvqv.png'
     },
     {
         brand: 'miss rock',
-        img: missRock
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/miss-rock_bffb1h.png'
     },
     {
         brand: 'moleca',
-        img: Moleca
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/moleca_xqlpws.png'
     },
     {
         brand: 'noba',
-        img: nobaLogo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/noba-logo_yw7z70.png'
     },
     {
         brand: 'olimpikus',
-        img: olimpikus
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/olimpikus-logo_vxvmtl.png'
     },
     {
         brand: 'polo',
-        img: poloLogo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/polo-logo_ubjyib.png'
     },
     {
         brand: 'puma',
-        img: pumaLogo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/puma-logo_ogw72r.png'
     },
     {
         brand: 'skaylap',
-        img: skaylap
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/skaylap-logo_ekfux3.png'
     },
     {
         brand: 'stalla co',
-        img: stalaCo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/stalla-logo_zpma17.png'
     },
     {
         brand: 'topper',
-        img: topperLogo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/topper-logo_dwjhgz.png'
     },
     {
         brand: 'urban cow',
-        img: urbanCow
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440469/brands/urbancow-logo_orw1ox.png'
     },
     {
         brand: 'vizziano',
-        img: vizzanoLogo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440467/brands/vizzano-logo_gnmnva.png'
     },
     {
         brand: 'zeuz',
-        img: zeuzLogo
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691440467/brands/zeuz-logo_yvc2eu.png'
     },
     
 ]

@@ -1,5 +1,5 @@
 import { Navigation, Pagination, A11y } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperSlide } from "swiper/react";
 import "./SliderBrandsSwiper.css";
 import "swiper/css";
 import "swiper/css/navigation";

@@ -6,14 +6,14 @@ import {
   PaginationContainer,
 } from "./CardsProductsStyles";
 import CardProduct from "./CardProduct/CardProduct";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { INITIAL_LIMIT } from "../../utils/constants";
 
 const CardsProducts = ({ doScroll }) => {
   let { products } = useSelector((state) => state.products);
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(INITIAL_LIMIT);
+  const limit = INITIAL_LIMIT;
 
   const selectedGenre = useSelector((state) => state.genres.selectedGenre);
   const selectedCategorie = useSelector(

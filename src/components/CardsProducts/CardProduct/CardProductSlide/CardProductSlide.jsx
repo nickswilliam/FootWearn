@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/navigation";
-import './SwiperFractionStyles.css'
+
 
 const CardProductSlide = ({imgs, title}) => {
   return (
@@ -24,7 +24,7 @@ const CardProductSlide = ({imgs, title}) => {
       }}
       pagination={{
         clickable: true,
-        type: 'fraction',
+        type: 'progressbar',
       }}
       draggable={true}
     >

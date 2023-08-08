@@ -1,17 +1,6 @@
-import IMAGE01 from '../../assets/imgs/hero/1.png'
-import IMAGE02 from '../../assets/imgs/hero/2.png'
-import IMAGE03 from '../../assets/imgs/hero/3.png'
-import IMAGE04 from '../../assets/imgs/hero/4.png'
-import IMAGE05 from '../../assets/imgs/hero/5.png'
-import IMAGE06 from '../../assets/imgs/hero/6.png'
-import IMAGE07 from '../../assets/imgs/hero/7.png'
-import IMAGE08 from '../../assets/imgs/hero/8.png'
-import IMAGE09 from '../../assets/imgs/hero/9.png'
-import IMAGE10 from '../../assets/imgs/hero/10.png'
-
 export const heroImgs = [
     {
-        img: IMAGE01,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439095/hero-slider/1_q3cq3d.jpg',
         cursor: false,
         id: 0,
         title: null,
@@ -19,7 +8,7 @@ export const heroImgs = [
         category: null
     },
     {
-        img: IMAGE02,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439095/hero-slider/2_m6fhqy.jpg',
         cursor: false,
         id: 1,
         title: null,
@@ -27,7 +16,7 @@ export const heroImgs = [
         category: null
     },
     {
-        img: IMAGE03,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439094/hero-slider/3_tnm6mj.jpg',
         cursor: true,
         id: 2,
         title: 'Ir a la tienda',
@@ -35,7 +24,7 @@ export const heroImgs = [
         category: 'store'
     },
     {
-        img: IMAGE04,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439094/hero-slider/4_sfaze3.jpg',
         cursor: true,
         id: 3,
         title: 'Ver en la tienda: urban',
@@ -43,7 +32,7 @@ export const heroImgs = [
         category: 'category'
     },
     {
-        img: IMAGE05,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439094/hero-slider/5_xsueb2.jpg',
         cursor: true,
         id: 4,
         title: 'Ver en la tienda: deportes',
@@ -51,7 +40,7 @@ export const heroImgs = [
         category: 'category'
     },
     {
-        img: IMAGE06,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439094/hero-slider/6_gdvdah.jpg',
         cursor: true,
         id: 5,
         title: 'Ver en la tienda: outdoor',
@@ -59,7 +48,7 @@ export const heroImgs = [
         category: 'category'
     },
     {
-        img: IMAGE07,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439094/hero-slider/7_bcn6rh.jpg',
         cursor: true,
         id: 6,
         title: 'Ver en la tienda: niñas',
@@ -67,7 +56,7 @@ export const heroImgs = [
         category: 'genre'
     },
     {
-        img: IMAGE08,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439094/hero-slider/8_qulkui.jpg',
         cursor: true,
         id: 7,
         title: 'Ver en la tienda: niños',
@@ -75,7 +64,7 @@ export const heroImgs = [
         category: 'genre'
     },
     {
-        img: IMAGE09,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439095/hero-slider/9_xqeewu.jpg',
         cursor: false,
         id: 8,
         title: null,
@@ -83,7 +72,7 @@ export const heroImgs = [
         category: null
     },
     {
-        img: IMAGE10,
+        img: 'https://res.cloudinary.com/dymyb2f2i/image/upload/v1691439095/hero-slider/10_nfhzf3.jpg',
         cursor: true,
         id: 9,
         title: 'Ir a la Tienda',

@@ -8,19 +8,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/adidas-duramo01_ozkgfx.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/adidas-duramo01_j3csaq_fds9x8.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/adidas-duramo02_nepyap.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/adidas-duramo02_ictqmm_eobhwp.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/adidas-duramo03_vk9t57.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/adidas-duramo03_azuayn_tkujw7.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/adidas-duramo_un5aif.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/adidas-duramo_itmu7u_e8njev.jpg",
       }
     ],
     category: "sports",
@@ -68,19 +68,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/adidas-runfalcon_maw5so.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/adidas-runfalcon01_ko2qhm_edjt9d.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/adidas-runfalcon02_tekjyn.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/adidas-runfalcon02_eibmg4_c9jiqt.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/adidas-runfalcon01_hfiarh.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/adidas-runfalcon03_rh2cu8_vrqudu.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/adidas-runfalcon03_gumm3k.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/adidas-runfalcon_lftkul_hfw0en.jpg",
       },
     ],
     category: "sports",
@@ -128,19 +128,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/araquinaW01_mfmbta.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/araquinaW01_wjm5gl_en1og5.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/araquinaW02_durjun.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/araquinaW02_aftgxx_qs0tv2.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/araquinaW03_zp7okn.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/araquinaW03_kd7e95_nrrjbg.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/araquinaW_omb5pk.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/araquinaW_op06zt_pryksn.jpg",
       },
     ],
     category: "urban",
@@ -188,11 +188,11 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790731/masc-shoes/mas-shoes01/cheeky-multi01_nd7kan.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436014/masc-shoes/cheeky-multi01_sruzzd_rrakmm.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/cheeky-multi_bfy7pp.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/cheeky-multi_khnxry_l2p1lt.jpg",
       },
     ],
     category: "children",
@@ -244,19 +244,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/asics-taikai_iq5os6.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/asics-taikai01_ccd77j_lhbxyx.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/asics-taikai01_ykbenf.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/asics-taikai02_bwja2z_wr8yvn.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/asics-taikai02_iig7t7.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/asics-taikai03_xcmr29_cfnu72.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/asics-taikai03_xfdk7i.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436013/masc-shoes/asics-taikai_oqpbrw_l60him.jpg",
       },
     ],
     category: "urban",
@@ -304,19 +304,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790716/masc-shoes/mas-shoes01/fila-float_jsenbm.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436014/masc-shoes/fila-float01_jk2hbx_yh4zrv.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/fila-float01_de0ibn.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436014/masc-shoes/fila-float02_wbdwru_mzvvty.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/fila-float02_yfrgz0.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436019/masc-shoes/fila-float03_ovvnsi_oekba5.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/fila-float03_j2rq9y.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436014/masc-shoes/fila-float_xsbwgm_exwlb3.jpg",
       },
     ],
     category: "sports",
@@ -364,19 +364,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/jaguar-classic_g5vbbq.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/jaguar-classic01_ugkwva_xgvgkc.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/jaguar-classic01_shczhi.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/jaguar-classic02_espc3m_xqraez.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/jaguar-classic02_i8j6rb.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/jaguar-classic03_ptic7z_c1psdj.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/jaguar-classic03_sujoe0.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/jaguar-classic_tx8ufw_evb8mb.jpg",
       },
     ],
     category: "urban",
@@ -424,15 +424,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/jaguar-mini-black_drkkml.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/jaguar-mini-black01_rpymoh_aydfl5.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/jaguar-mini-black01_jx8kgm.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/jaguar-mini-black02_diydjv_qnkavs.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/jaguar-mini-black02_e5zdn0.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/jaguar-mini-black_hftacj_xk3txe.jpg",
       },
     ],
     category: "children",
@@ -484,11 +484,11 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/kappa-monsi_lslnjo.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/kappa-monsi01_hdfadp_b28ccz.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790717/masc-shoes/mas-shoes01/kappa-monsi01_fwcmo2.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/kappa-monsi_e1wksh_zcuz8t.jpg",
       },
     ],
     category: "outdoor",
@@ -536,19 +536,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/kevingston_dausvy.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/kevingston01_tpsdc0_cycc1o.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/kevingston01_gqeqbn.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436021/masc-shoes/kevingston02_uxjbzt_cyklg8.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/kevingston02_uvlhq0.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436021/masc-shoes/kevingston03_j7ily2_perjni.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/kevingston03_tqmiab.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436020/masc-shoes/kevingston_pxiiav_lqbv0l.jpg",
       },
     ],
     category: "urban",
@@ -596,19 +596,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/lacoste_fooiwz.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436021/masc-shoes/lacoste01_jkot43_cftxpl.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/lacoste01_grzzgr.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/lacoste02_vjloon_nkhtif.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/lacoste02_heps6u.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/lacoste03_jfe8x2_n5wzt4.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/lacoste03_rz1ahv.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436021/masc-shoes/lacoste_w4twor_lcp6jr.jpg",
       },
     ],
     category: "urban",
@@ -656,19 +656,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790718/masc-shoes/mas-shoes01/lagear-grey_tki6dp.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/lagear-grey01_cuas0j_lfm8zt.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/lagear-grey01_sytcmm.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/lagear-grey02_hd6mwc_ngao1i.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/lagear-grey02_pf6dgx.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/lagear-grey03_tuoorx_x0eoss.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/lagear-grey03_q0wagp.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/lagear-grey_ibwzwp_autx5h.jpg",
       },
     ],
     category: "urban",
@@ -716,15 +716,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/minis-kids_zzzzkb.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/minis-kids01_ktscnl_hdassw.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/minis-kids01_h6pvtl.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/minis-kids02_qbxc5u_awnk0j.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/minis-kids02_gyygjd.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/minis-kids_gqmant_ibpmrw.jpg",
       },
     ],
     category: "children",
@@ -776,15 +776,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/noba_ozvs8i.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/noba01_yjlzlx_yoiitk.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/noba01_ldq7bi.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/noba02_hlfjxj_tio4dz.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/noba02_gxc82r.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436025/masc-shoes/noba_jowwbe_to125p.jpg",
       },
     ],
     category: "urban",
@@ -832,19 +832,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/olimpikus_go9wxo.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/olimpikus01_txd0sz_xtrjlb.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/olimpikus01_md7obb.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/olimpikus02_gwluxv_mrjhr7.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/olimpikus02_h5jbh2.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/olimpikus03_reecuz_ce5jyp.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790719/masc-shoes/mas-shoes01/olimpikus03_nwwgrh.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/olimpikus_t73s6o_pk02ge.jpg",
       },
     ],
     category: "sports",
@@ -892,19 +892,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/polo-label_rm7vtw.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/polo-label01_kliv8q_exbafe.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/polo-label01_ydqsir.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/polo-label02_pv6wgf_oq8w2m.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/polo-label02_yxpvqa.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436027/masc-shoes/polo-label03_xrc9wd_plkt7s.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/polo-label03_fxlstz.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436026/masc-shoes/polo-label_vpszs5_muyxfr.jpg",
       },
     ],
     category: "urban",
@@ -952,19 +952,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/puma-resolve_tkic31.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436028/masc-shoes/puma-resolve01_wuhgg8_f1buey.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/puma-resolve01_dpibbf.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436032/masc-shoes/puma-resolve02_olbnij_zsfrtj.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/puma-resolve02_k7yckk.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436032/masc-shoes/puma-resolve03_huvk7k_tcbhae.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/puma-resolve03_luia2u.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436027/masc-shoes/puma-resolve_gpkp8d_ehxyye.jpg",
       },
     ],
     category: "sports",
@@ -1012,19 +1012,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/skaylap-blue_oxygmy.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436032/masc-shoes/skaylap-blue01_ypayag_pnttmq.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/skaylap-blue01_gfelpi.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436032/masc-shoes/skaylap-blue02_oefbyo_exjiof.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790730/masc-shoes/mas-shoes01/skaylap-blue02_h28wc8.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436032/masc-shoes/skaylap-blue03_rj6dda_k4lxfk.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790731/masc-shoes/mas-shoes01/skaylap-blue03_qq2vkk.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436032/masc-shoes/skaylap-blue_fvbpts_vdczuq.jpg",
       },
     ],
     category: "children",
@@ -1076,19 +1076,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790721/masc-shoes/mas-shoes01/topper-strong_jp37lk.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436011/masc-shoes/topper-strong01_djfspx_qpfw7j.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790721/masc-shoes/mas-shoes01/topper-strong01_w0av5n.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/topper-strong02_bvwrtw_dsof59.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790721/masc-shoes/mas-shoes01/topper-strong02_lj2puk.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436012/masc-shoes/topper-strong03_fruvhz_toaslf.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790715/masc-shoes/mas-shoes01/topper-strong03_gjgkrh.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436011/masc-shoes/topper-strong_w0l1df_vopuri.jpg",
       },
     ],
     category: "sports",
@@ -1136,19 +1136,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790720/masc-shoes/mas-shoes01/toppergrey_pnsjs1.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436033/masc-shoes/toppergrey01_fdwtpz_zjxlfl.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790721/masc-shoes/mas-shoes01/toppergrey01_nhfpfn.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436033/masc-shoes/toppergrey02_t6tzpv_nwhdtd.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790721/masc-shoes/mas-shoes01/toppergrey02_f8of8t.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436011/masc-shoes/toppergrey03_wkpufm_pnbqs3.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790721/masc-shoes/mas-shoes01/toppergrey03_qiw5fx.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691436032/masc-shoes/toppergrey_vq5x9o_p6itnz.jpg",
       },
     ],
     category: "outdoor",
@@ -1198,19 +1198,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790550/fem-shoes/fem01/adidas-start_nvwb5e.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435954/fem-shoes/adidas-start01_lav7cz_eor5ps.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/adidas-start01_xfhwiv.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435954/fem-shoes/adidas-start02_ceiavx_pgvbmi.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/adidas-start02_cati65.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435954/fem-shoes/adidas-start03_qjyfzp_xtr1ku.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/adidas-start03_gf3nwk.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435954/fem-shoes/adidas-start_mn1qso_jwsr1u.jpg",
       },
     ],
     category: "sports",
@@ -1258,19 +1258,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/adidas-zxboost_o5to3k.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435954/fem-shoes/adidas-zxboost01_vjzadp_eq1ky1.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/adidas-zxboost01_ig2icf.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435954/fem-shoes/adidas-zxboost02_ydtohf_cb2vi7.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/adidas-zxboost02_su7jzb.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/adidas-zxboost03_embzdc_lonyya.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/adidas-zxboost03_j7n5uc.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435954/fem-shoes/adidas-zxboost_bbytql_x7kpf0.jpg",
       },
     ],
     category: "sports",
@@ -1318,19 +1318,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/atomik-casual_bwozpb.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/atomik-casual01_yrcwr5_ul61lb.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/atomik-casual01_z51w3u.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/atomik-casual02_ct9vcy_kksibb.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790551/fem-shoes/fem01/atomik-casual02_iutkwp.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/atomik-casual03_uc7b1w_yrire1.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/atomik-casual03_iflx53.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/atomik-casual_fcnpmx_fyjy0k.jpg",
       },
     ],
     category: "urban",
@@ -1378,15 +1378,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790662/fem-shoes/fem01/footy-pony_dmdfac.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/footy-pony01_nmizox_wuicqw.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790662/fem-shoes/fem01/footy-pony01_lafmho.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/footy-pony02_qh1zkk_ry2ejk.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790662/fem-shoes/fem01/footy-pony02_mamdgg.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/footy-pony_cdm0ei_bivekx.jpg",
       },
     ],
     category: "children",
@@ -1438,19 +1438,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/fila-trend_yqnlhj.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/fila-trend01_idzaht_y2zyhy.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/fila-trend01_rwnaqt.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/fila-trend02_c2wihq_tuxhi1.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/fila-trend02_ot81z6.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/fila-trend03_bdrvuj_axodka.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/fila-trend03_btitbb.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435955/fem-shoes/fila-trend_fzahre_u83geq.jpg",
       },
     ],
     category: "urban",
@@ -1498,19 +1498,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/gummi_lw8e1q.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/gummi01_qea2rs_la0alz.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/gummi01_t9s8z1.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/gummi02_wzcgbx_rp7h6g.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/gummi02_y9zrwp.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/gummi03_b4ucqo_wuazyk.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790552/fem-shoes/fem01/gummi03_cp9azx.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/gummi_ue3ecb_zpgyiz.jpg",
       },
     ],
     category: "urban",
@@ -1558,7 +1558,7 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/kappa-agatha_y1ope6.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/kappa-agatha_s49pfr_it0dc5.jpg",
       },
     ],
     category: "sports",
@@ -1606,15 +1606,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790662/fem-shoes/fem01/jaguar-flowers_ygmget.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/jaguar-flowers01_hg6hsu_otvzgx.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790662/fem-shoes/fem01/jaguar-flowers01_vcngrs.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/jaguar-flowers02_ufogjw_ivb9zz.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790661/fem-shoes/fem01/jaguar-flowers02_tjgbhy.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/jaguar-flowers_ipueyf_mytwj1.jpg",
       },
     ],
     category: "children",
@@ -1666,19 +1666,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/ladystork-alberta_efyaoq.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435957/fem-shoes/ladystork-alberta01_u1na11_qavrml.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/ladystork-alberta01_uiy4up.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435963/fem-shoes/ladystork-alberta02_l8zsp5_znaod1.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/ladystork-alberta02_bdtzls.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435963/fem-shoes/ladystork-alberta03_gazhlm_z5k0ya.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/ladystork-alberta03_gpwyxk.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435956/fem-shoes/ladystork-alberta_lmiamo_vourlb.jpg",
       },
     ],
     category: "urban",
@@ -1726,19 +1726,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/miss-rock_q1zox7.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435964/fem-shoes/miss-rock01_l8hvq2_ky57vc.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/miss-rock01_fm1ol1.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435964/fem-shoes/miss-rock02_zcggis_ea0bnk.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/miss-rock02_oumcbg.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435964/fem-shoes/miss-rock03png_jatumo_txxmwx.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/miss-rock03png_qrrtlj.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435964/fem-shoes/miss-rock_rlwlnn_kgdtbc.jpg",
       },
     ],
     category: "urban",
@@ -1786,15 +1786,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790553/fem-shoes/fem01/moleca_dkmgbp.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435964/fem-shoes/moleca01_rsvjoi_exwazh.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/moleca01_htgnfu.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/moleca02_tp3ffy_cfnvmj.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/moleca02_ryufge.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/moleca_osxely_dmboaz.jpg",
       },
     ],
     category: "urban",
@@ -1842,19 +1842,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/olympikus-swift_vu7isv.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/olympikus-swift01_hcqlgx_dnsyl6.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/olympikus-swift01_p54gee.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/olympikus-swift02_zzskpe_ivecex.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/olympikus-swift02_vcdje1.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/olympikus-swift03_wtq3ma_gg0tta.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/olympikus-swift03_gr2wgb.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/olympikus-swift_uvz8qu_vdigrl.jpg",
       },
     ],
     category: "sports",
@@ -1902,15 +1902,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790661/fem-shoes/fem01/minis-kids-lila_nhlqnh.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435964/fem-shoes/minis-kids-lila01_vheds7_dwieww.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790661/fem-shoes/fem01/minis-kids-lila01_uvdczg.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435964/fem-shoes/minis-kids-lila02_k6npuy_ljahd8.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790662/fem-shoes/fem01/minis-kids-lila02_bdxgjz.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435963/fem-shoes/minis-kids-lila_uxdkls_cidlem.jpg",
       },
     ],
     category: "children",
@@ -1962,19 +1962,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/stalla-co_iisonz.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435967/fem-shoes/stalla-co01_upl3au_hw3ckb.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790555/fem-shoes/fem01/stalla-co01_uuuibd.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435971/fem-shoes/stalla-co02_wb23d2_cphms5.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790555/fem-shoes/fem01/stalla-co02_bdtf2g.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435971/fem-shoes/stalla-co03_cvmuff_vjlpsw.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790555/fem-shoes/fem01/stalla-co03_kvnxcm.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/stalla-co_f5enw7_wuivvp.jpg",
       },
     ],
     category: "urban",
@@ -2022,19 +2022,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/stalla_muwrpz.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/stalla01_cujokg_dx6uwh.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/stalla01_x8jttf.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/stalla02_nranqk_okcqkd.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790554/fem-shoes/fem01/stalla02_vswr9h.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/stalla03_mvrz7x_krpxhs.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790555/fem-shoes/fem01/stalla03_a873n8.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435965/fem-shoes/stalla_f5rt0n_zz1q9g.jpg",
       },
     ],
     category: "urban",
@@ -2082,19 +2082,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790555/fem-shoes/fem01/topper-black_umsqx3.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435971/fem-shoes/topper-black01_c72bhq_qihcrw.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790555/fem-shoes/fem01/topper-black01_y0mfmw.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435971/fem-shoes/topper-black02_xkzvmj_ysgnxi.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790555/fem-shoes/fem01/topper-black02_s4idgi.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435971/fem-shoes/topper-black03_yaqxea_bmszlk.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790555/fem-shoes/fem01/topper-black03_yyjsb1.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435971/fem-shoes/topper-black_bvmoxd_izzuux.jpg",
       },
     ],
     category: "sports",
@@ -2142,19 +2142,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790556/fem-shoes/fem01/urban-cow_reomba.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435971/fem-shoes/urban-cow01_gs2ozo_sbxjmi.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790556/fem-shoes/fem01/urban-cow01_mvddqh.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435972/fem-shoes/urban-cow02_dlrihw_vps1pb.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790556/fem-shoes/fem01/urban-cow02_x36hkg.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435972/fem-shoes/urban-cow03_i0xown_g5efak.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790556/fem-shoes/fem01/urban-cow03_avbbio.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435971/fem-shoes/urban-cow_hpqnzy_ayyccs.jpg",
       },
     ],
     category: "urban",
@@ -2202,15 +2202,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790661/fem-shoes/fem01/minis-kids_jv9ni6.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435963/fem-shoes/minis-kids01_b1ctv1_dx1lte.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790661/fem-shoes/fem01/minis-kids01_hsyzdx.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435963/fem-shoes/minis-kids02_qx78vz_ohwz6p.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790661/fem-shoes/fem01/minis-kids02_pdwcaz.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435963/fem-shoes/minis-kids_st5hdp_jgxwcr.jpg",
       },
     ],
     category: "children",
@@ -2262,19 +2262,19 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790556/fem-shoes/fem01/vizzano_amrz4n.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435973/fem-shoes/vizzano01_yiijpn_ylc2da.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790556/fem-shoes/fem01/vizzano01_bgzdta.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435974/fem-shoes/vizzano02_lg5c0e_nfvjvx.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790550/fem-shoes/fem01/vizzano02_n723eg.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435953/fem-shoes/vizzano03_kbdnpd_iakdod.jpg",
       },
       {
         id: 4,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790550/fem-shoes/fem01/vizzano03_jhpdgd.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435972/fem-shoes/vizzano_iyduro_jf8mxi.jpg",
       },
     ],
     category: "urban",
@@ -2322,15 +2322,15 @@ export const products = [
     imgs: [
       {
         id: 1,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790550/fem-shoes/fem01/zeuz-black_k9uohy.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435953/fem-shoes/zeuz-black01_qlaxhi_wde2oi.jpg",
       },
       {
         id: 2,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790550/fem-shoes/fem01/zeuz-black01_rigkr8.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435953/fem-shoes/zeuz-black02_qcqcuv_ymde0v.jpg",
       },
       {
         id: 3,
-        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1684790550/fem-shoes/fem01/zeuz-black02_jjhczo.png",
+        img: "https://res.cloudinary.com/dymyb2f2i/image/upload/v1691435953/fem-shoes/zeuz-black_csxqrz_a247op.jpg",
       },
     ],
     category: "urban",
