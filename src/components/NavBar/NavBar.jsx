@@ -1,6 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import {
   FaPhone,
   FaPhotoVideo,
@@ -51,7 +51,6 @@ const MenuSection = ({ toggleSection, handleMenu }) => (
 );
 
 const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
-  const { cartMenu } = useSelector((state) => state.cart);
   const { currentUser, hiddenMenu } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const [toggleSection, setToggleSection] = useState(false);
@@ -80,7 +79,7 @@ const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
     if (toggleSection) {
       setToggleSection(!toggleSection);
     }
-  }, [pathname, toggleSearchMenu, !cartMenu]);
+  }, [pathname, toggleSearchMenu, toggleSection]);
 
   const handleMenu = () => {
     setToggleMenu(!toggleMenu);
@@ -111,8 +110,8 @@ const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
           />
           {currentUser ? (
             <p style={{ color: "var(--blue-light)" }}>
-              {currentUser.name.toUpperCase().charAt(0) +
-                currentUser.lastname.toUpperCase().charAt(0)}
+              {currentUser?.name.toUpperCase().charAt(0) +
+                currentUser?.lastname.toUpperCase().charAt(0)}
             </p>
           ) : (
             "Registro"

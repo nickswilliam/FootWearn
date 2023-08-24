@@ -1,5 +1,6 @@
 import { styled } from "styled-components";
 import BackgroundBG from "../../assets/imgs/register/bg-img.jpg";
+import { FaCircleNotch } from "react-icons/fa";
 
 export const RegisterWrapper = styled.div`
   margin-top: 80px;
@@ -131,7 +132,7 @@ export const RegisterInput = styled.input`
         color: var(--blue);
     }
 `
-export const RegisterBtn = styled.input`
+/* export const RegisterBtn = styled.button`
     margin-top: 40px;
     width: 100%;
     border-radius: 5px;
@@ -158,4 +159,33 @@ export const RegisterBtn = styled.input`
         font-size: 18px;
     }
 
-`
+` */
+
+export const LoadIcon = styled(FaCircleNotch)`
+  color: var(--white);
+  font-size: 24px;
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+  animation: rotate infinite 0.8s ease-in forwards;
+
+  @media (max-width: 768px){
+    font-size: 22px;
+  }
+
+  @media (max-width: 480px){
+    font-size: 20px;
+  }
+
+  @media (max-width: 400px){
+    font-size: 18px;
+  }
+`;

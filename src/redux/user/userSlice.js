@@ -2,9 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     currentUser: null,
-    usersList: [],
     hiddenMenu: true,
-    isUser: null
 }
 
 const userSlice = createSlice({
@@ -23,32 +21,13 @@ const userSlice = createSlice({
                 hiddenMenu: !state.hiddenMenu
             }
         },
-        loginUser: (state, action) =>{
-            const email = action.payload.email
-            const password = action.payload.password
-            return{
-                ...state,
-                currentUser: state.usersList.find(user=>user.email === email && user.password === password )
-            }
-        },
-        addNewUser: (state, action)=> {
-            return{
-                ...state,
-                isUser: !state.isUser,
-                usersList: [...state.usersList, action.payload]
-            }
-        },
-        userExist: (state, action)=>{
-            const email = action.payload
-            const userLog = state.usersList.some(user=> user.email === email)
-            console.log('userlog', userLog);
-            return{
-                ...state,
-                isUser: userLog
+        setVerified: state => {
+            if(state.currentUser){
+                state.currentUser.verified = true;
             }
         }
     }
 })
 
-export const {setCurrentUser, toggleHiddenMenu, loginUser, addNewUser, userExist} = userSlice.actions
+export const {setCurrentUser, toggleHiddenMenu, setVerified} = userSlice.actions
 export default userSlice.reducer

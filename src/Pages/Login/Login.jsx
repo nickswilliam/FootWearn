@@ -14,8 +14,9 @@ import { useFormik } from "formik";
 import { regEmail } from "../../utils/regExp";
 import * as Yup from "yup";
 import { useRedirect } from "../../hooks/useRedirect";
-import { loginUser } from "../../redux/user/userSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { loginUser } from "../../axios/axiosUser";
+import { setCurrentUser } from "../../redux/user/userSlice";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
   useEffect(() => {
@@ -24,8 +25,7 @@ const Login = () => {
   }, []);
   useRedirect("/");
   const loginRef = useRef();
-  const { currentUser } = useSelector((state) => state.user);
-  const dispatch = useDispatch();
+const dispatch = useDispatch();
   const [errorMsg, setErrorMsg] = useState(null);
 
   const validationSchema = Yup.object({
@@ -42,10 +42,24 @@ const Login = () => {
       password: "",
     },
     validationSchema,
-    onSubmit: (values, actions) => {
-      dispatch(loginUser({ email: values.email, password: values.password }));
-      actions.resetForm();
-      !currentUser ? setErrorMsg('*E-mail o contraseña incorrectos') : null
+    onSubmit: async (values, actions) => {
+      const user = await loginUser(
+        values.email,
+        values.password
+      )
+      if(typeof user === "string"){
+        setErrorMsg(`*${user}`)
+        actions.resetForm();
+        return;
+      } else {
+        dispatch(setCurrentUser({
+          ...user.user
+        }))
+        actions.resetForm();
+        setErrorMsg(null)
+        return;
+      }
+
     },
   });
 

@@ -15,3 +15,7 @@ export const months = [
   "Noviembre",
   "Diciembre",
 ];
+
+export const BASE_URL = 'https://footwearn-backend.vercel.app'
+export const USER = '14mU53r'
+export const ADMIN = '50yun4admin'

@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import {
-  RegisterBtn,
+  LoadIcon,
   RegisterContainInput,
   RegisterForm,
   RegisterInput,
@@ -15,12 +15,38 @@ import { regEmail } from "../../utils/regExp";
 import * as Yup from "yup";
 import {
   setCurrentUser,
-  addNewUser,
-  userExist,
 } from "../../redux/user/userSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useRedirect } from "../../hooks/useRedirect";
-import { current } from "@reduxjs/toolkit";
+import { createUser } from "../../axios/axiosUser";
+
+const registerBtnStyles = {
+  marginTop: "40px",
+  width: "100%",
+  borderRadius: "5px",
+  padding: "10px 20px",
+  fontWeight: "600",
+  fontSize: "22px",
+  border: "1px solid var(--light-orange)",
+  backgroundColor: "var(--orange)",
+  color: "var(--white)",
+  cursor: "pointer",
+
+  transition: "all ease .2s",
+
+  /*  &:hover{
+      background-color: var(--orange2);
+      color: var(--grey-light);
+      transition: all ease-in .2s;
+  }
+
+  @media (max-width: 768px){
+      font-size: 20px;
+  }
+  @media (max-width: 480px){
+      font-size: 18px;
+  } */
+}
 
 const Register = () => {
   useEffect(() => {
@@ -28,13 +54,14 @@ const Register = () => {
     registerRef.current.scrollIntoView();
   }, []);
 
-  const { isUser } = useSelector((state) => state.user);
+
   const dispatch = useDispatch();
   const { state } = useLocation();
   useRedirect(state?.redirectedFromCheckout ? "/checkout" : "/");
   const registerRef = useRef();
   const [toggleRegister, setToggleRegister] = useState(false);
   const [toggleMsg, setToggleMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
 
   const validationSchema = Yup.object({
     name: Yup.string()
@@ -64,26 +91,32 @@ const Register = () => {
       email: "",
       password: "",
       password2: "",
+      header: ""
     },
     validationSchema,
-    onSubmit: (values, actions) => {
+    onSubmit: async(values, actions) => {
       registerRef.current.scrollIntoView();
-      dispatch(userExist(values.email));
-      if (isUser) {
-        dispatch(setCurrentUser(null));
-        setToggleRegister(!toggleRegister);
-        setToggleMsg("*El mail corresponde a un usuario existente");
-
-        setTimeout(() => {
-          setToggleRegister(false);
-        }, 2500);
+      setIsLoading(!isLoading)
+      const user = await createUser(
+        values.name,
+        values.lastname,
+        values.email,
+        values.password,
+        values.header
+      )
+      
+      if(typeof user === "string") {
+        setToggleRegister(!toggleRegister)
+        setIsLoading(false)
+        setToggleMsg(`*${user}`)
         return;
       } else {
-        dispatch(setCurrentUser(values));
-        dispatch(addNewUser(values));
+        dispatch(setCurrentUser({
+          ...user.user
+        }));  
+        setToggleRegister(false);        
         actions.resetForm();
-        setToggleMsg("Registro Exitoso");
-        setToggleRegister(!toggleRegister);
+        return;
       }
     },
   });
@@ -113,8 +146,12 @@ const Register = () => {
             ) : null}
           </RegisterContainInput>
         ))}
-        <RegisterBtn type="submit" value="Confirmar registro" />
+        <div style={{display: "flex", width: "100%", flexWrap: "wrap", justifyContent: "center", alignItems: "center"}}>
+        <RegisterLabel htmlFor="header" style={{alignSelf: "flex-start", fontSize: "14px", width: "50%", marginTop: "20px"}}>Posee clave admin? </RegisterLabel>
+        <RegisterInput type="text" id="header"{...formik.getFieldProps("header")} style={{fontSize: "14px", width: "50%"}}/>
+        </div>
 
+        <button type="submit" style={registerBtnStyles} disabled={isLoading}>{!isLoading? 'Registrarse' : <LoadIcon/>}</button>
         <p>
           ¿Ya tienes una cuenta?<Link to="/login">Inicia sesión</Link>
         </p>
