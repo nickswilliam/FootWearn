@@ -73,6 +73,38 @@ export const RegisterForm = styled.form`
     @media (max-width: 480px){
         padding: 15px;
     }
+
+    button{
+      margin-top: 40px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 22px;
+    border: 1px solid var(--light-orange);
+    background-color: var(--orange);
+    color: var(--white);
+    cursor: pointer;
+
+    transition: all ease .2s;
+    &:disabled{
+      background-color: var(--orange2);
+    }
+
+    &:hover{
+        background-color: var(--orange2);
+        color: var(--grey-light);
+        transition: all ease-in .2s;
+    }
+
+    @media (max-width: 768px){
+        font-size: 20px;
+    }
+    @media (max-width: 480px){
+        font-size: 18px;
+    }
+
+    }
 `
 
 export const RegisterContainInput = styled.div`

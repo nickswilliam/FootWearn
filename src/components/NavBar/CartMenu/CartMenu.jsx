@@ -41,6 +41,20 @@ const CartMenu = () => {
       dispatch(clearCart());
   };
 
+  const validationSubmit = () => {
+    if(!currentUser){
+      alert('Debes tener una cuenta para confirmar tu compra')
+      navigate('/register')
+      return;
+    } else if(!currentUser.verified){
+      alert('Debes verificar tu cuenta para confirmar tu compra')
+      navigate('verify')
+    } else{
+      navigate("./checkout");
+      dispatch(toggleCartMenu());
+    }
+  }
+
   return (
     <CartContainer show={cartMenu}>
       <CartTopContainer>
@@ -84,9 +98,7 @@ const CartMenu = () => {
             addcart="true"
             title="Confirmar compra"
             onClick={() => {
-              !currentUser && alert('Debes tener una cuenta para confirmar tu compra')
-              navigate("./checkout");
-              dispatch(toggleCartMenu());
+              validationSubmit()
             }}
           >
             <FaCheckCircle color="var(--white-menus)" />

@@ -3,7 +3,6 @@ import BackgroundBG from "../../assets/imgs/success/bg-img.jpg";
 import { FaCheckCircle } from "react-icons/fa";
 
 export const SuccessContainer = styled.div`
-  margin-top: 80px;
   width: 100%;
   background-image: url("${BackgroundBG}");
   background-size: cover;

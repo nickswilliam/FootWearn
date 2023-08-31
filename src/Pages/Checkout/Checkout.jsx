@@ -22,14 +22,15 @@ import * as Yup from "yup";
 import { FaTrash } from "react-icons/fa";
 import { clearCart } from "../../redux/cartSlice/cartSice";
 import { useNavigate } from "react-router-dom";
-import { orderStart, orderSuccess } from "../../redux/ordersSlice/ordersSlice";
 import { CartBtnConfirm } from "../../components/NavBar/CartMenu/CartMenuStyles";
+import { createOrders } from "../../axios/axiosOrders";
 
 const Checkout = () => {
   const checkoutRef = useRef();
   const loading = useSelector((state) => state.orders.loading);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const { currentUser } = useSelector((state) => state.user);
 
   const { shippingCost, cartItems } = useSelector((state) => state.cart);
   const totalPrice = cartItems.reduce(
@@ -44,7 +45,7 @@ const Checkout = () => {
     name: Yup.string()
       .min(4, "*Debe contener al menos 4 caracteres")
       .required("*Campo obligatorio"),
-    phone: Yup.string()
+    cellphone: Yup.string()
       .min(10, "*Teléfono erroneo")
       .max(10, "*Teléfono incorrecto")
       .matches(/^[0-9]+$/, "*Teléfono incorrecto")
@@ -58,26 +59,26 @@ const Checkout = () => {
   const formik = useFormik({
     initialValues: {
       name: "",
-      phone: "",
+      cellphone: "",
       location: "",
       adress: "",
     },
     validationSchema,
-    onSubmit: (values) => {
-      dispatch(orderStart());
-
-      setTimeout(() => {
-        navigate("/success");
-        dispatch(
-          orderSuccess({
-            users: values,
-            cartItems,
-            shippingCost,
-            date: Date.now(),
-          })
-        );
-        dispatch(clearCart());
-      }, 2500);
+    onSubmit: async(values) => {
+      const orderData = {
+        cartItems,
+        price: totalPrice,
+        shippingCost,
+        total: (totalPrice + shippingCost),
+        shippingDetails: {...values}
+      }
+      try {
+        await createOrders(orderData, dispatch, currentUser)
+        navigate("/success")
+        dispatch(clearCart())
+      } catch (error) {
+        alert('Algo salió mal al crear la orden')
+      }
     },
   });
 
@@ -86,7 +87,9 @@ const Checkout = () => {
   };
 
   useEffect(() => {
-    document.title = `${totalCartItemsQuantity >= 1 ? `(${totalCartItemsQuantity}) `: '' }` + "Confirmar compra";
+    document.title =
+      `${totalCartItemsQuantity >= 1 ? `(${totalCartItemsQuantity}) ` : ""}` +
+      "Confirmar compra";
     checkoutRef.current.scrollIntoView();
   }, []);
   return (
@@ -116,11 +119,11 @@ const Checkout = () => {
                 <input
                   type="text"
                   placeholder="Ingrese su teléfono"
-                  id="phone"
-                  {...formik.getFieldProps("phone")}
+                  id="cellphone"
+                  {...formik.getFieldProps("cellphone")}
                 />
-                {formik.touched.phone && formik.errors.phone ? (
-                  <p>{formik.errors.phone}</p>
+                {formik.touched.cellphone && formik.errors.cellphone ? (
+                  <p>{formik.errors.cellphone}</p>
                 ) : null}
               </InputContainer>
 

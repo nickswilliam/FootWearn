@@ -7,13 +7,12 @@ export const MainContainer = styled.main`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 80px;
+  margin-top: ${({mt})=> mt? '0' : '80px'};
 `;
 
 export const MainTitle = styled.h1`
   margin: 100px 0 80px 0;
   background-color: var(--dark-violet);
-  z-index: 2;
   color: var(--white);
   font-size: 48px;
   font-family: "Under-Rated";

@@ -5,6 +5,7 @@ import { LayoutContainer } from "./LayoutStyles";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleHiddenMenu } from "../../redux/user/userSlice";
+import UserLogged from "../UserLogged/UserLogged";
 
 const Layout = ({ children }) => {
   const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const Layout = ({ children }) => {
   return (
     <LayoutContainer>
       <Header />
+      <UserLogged/>
       {children}
       <Footer />
     </LayoutContainer>

@@ -1,47 +1,76 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ORDER_START } from "../../utils/constants";
 
 const initialState = {
-  ordersList: [],
+  orders: null,
   loading: false,
-  orderID: ORDER_START,
-  selectedOrder: null
+  selectedOrder: null,
+  error: null,
+  currentOrderID: null
 };
 
 const ordersSlice = createSlice({
   name: "orders",
   initialState,
   reducers: {
-    orderStart: (state) => {
+    createOrderFail: (state, action) => {
+      return {
+        ...state,
+        loading: false,
+        error: action.payload,
+      };
+    },
+    fetchOrderStart: (state) => {
       return {
         ...state,
         loading: true,
       };
     },
-    orderSuccess: (state, action) => {
+    fetchOrderSuccess: (state, action) => {
       return {
         ...state,
         loading: false,
-        orderID: state.orderID + 1,
-        ordersList: [...state.ordersList, {...action.payload, orderID: state.orderID + 1 }]
+        error: null,
+        orders: [...action.payload],
       };
     },
-    clearOrders: (state) => {
+    fetchOrderFail: (state, action) => {
       return {
         ...state,
-        ordersList: [],
-        selectedOrder: null
+        loading: false,
+        error: action.payload,
       };
     },
-    selectOrder: (state, action)=>{
+
+    clearError: (state) => {
       return {
         ...state,
-        selectedOrder: state.ordersList.find(order=> order.orderID === action.payload)
+        error: null,
+      };
+    },
+
+    selectOrder: (state, action) => {
+      return {
+        ...state,
+        selectedOrder: state.orders.find(
+          (order) => order.orderID === action.payload
+        ),
+      };
+    },
+    setCurrentOrderID: (state, action)=>{
+      return{
+        ...state,
+        currentOrderID: action.payload
+      }
+    },
+    setOrders: (state, action)=>{
+      return{
+        ...state,
+        orders: action.payload
       }
     }
   },
-
 });
 
-export const { orderStart, orderSuccess, clearOrders, selectOrder } = ordersSlice.actions;
+export const { fetchOrderStart, fetchOrderFail, fetchOrderSuccess, createOrderFail, clearError, selectOrder, setCurrentOrderID, setOrders } =
+  ordersSlice.actions;
 export default ordersSlice.reducer;

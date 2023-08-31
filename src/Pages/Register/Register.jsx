@@ -20,33 +20,6 @@ import { useDispatch } from "react-redux";
 import { useRedirect } from "../../hooks/useRedirect";
 import { createUser } from "../../axios/axiosUser";
 
-const registerBtnStyles = {
-  marginTop: "40px",
-  width: "100%",
-  borderRadius: "5px",
-  padding: "10px 20px",
-  fontWeight: "600",
-  fontSize: "22px",
-  border: "1px solid var(--light-orange)",
-  backgroundColor: "var(--orange)",
-  color: "var(--white)",
-  cursor: "pointer",
-
-  transition: "all ease .2s",
-
-  /*  &:hover{
-      background-color: var(--orange2);
-      color: var(--grey-light);
-      transition: all ease-in .2s;
-  }
-
-  @media (max-width: 768px){
-      font-size: 20px;
-  }
-  @media (max-width: 480px){
-      font-size: 18px;
-  } */
-}
 
 const Register = () => {
   useEffect(() => {
@@ -151,7 +124,7 @@ const Register = () => {
         <RegisterInput type="text" id="header"{...formik.getFieldProps("header")} style={{fontSize: "14px", width: "50%"}}/>
         </div>
 
-        <button type="submit" style={registerBtnStyles} disabled={isLoading}>{!isLoading? 'Registrarse' : <LoadIcon/>}</button>
+        <button type="submit" disabled={isLoading}>{!isLoading? 'Registrarse' : <LoadIcon/>}</button>
         <p>
           ¿Ya tienes una cuenta?<Link to="/login">Inicia sesión</Link>
         </p>

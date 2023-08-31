@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import BackgroundIMG from "../../assets/imgs/notfound/bg-img.jpg";
 
 export const NotFoundContainer = styled.div`
-  margin-top: 80px;
+  margin-top: ${({mt})=> mt? '0' : '80px'};
   display: flex;
   flex-direction: column;
   justify-content: center;

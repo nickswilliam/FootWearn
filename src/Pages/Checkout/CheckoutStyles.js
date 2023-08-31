@@ -3,7 +3,6 @@ import { styled } from "styled-components";
 import ImgBG from "../../assets/imgs/checkout/bg-img.jpg";
 
 export const CheckoutContainBG = styled.div`
-  margin-top: 80px;
   width: 100%;
   min-height: 700px;
   display: flex;

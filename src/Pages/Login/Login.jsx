@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import {
-  LoginBtn,
   LoginContainInput,
   LoginForm,
   LoginInput,
@@ -17,6 +16,7 @@ import { useRedirect } from "../../hooks/useRedirect";
 import { loginUser } from "../../axios/axiosUser";
 import { setCurrentUser } from "../../redux/user/userSlice";
 import { useDispatch } from "react-redux";
+import { LoadIcon } from "../Checkout/CheckoutStyles";
 
 const Login = () => {
   useEffect(() => {
@@ -25,8 +25,10 @@ const Login = () => {
   }, []);
   useRedirect("/");
   const loginRef = useRef();
+ 
 const dispatch = useDispatch();
   const [errorMsg, setErrorMsg] = useState(null);
+  const [loading, setLoading] = useState(false)
 
   const validationSchema = Yup.object({
     email: Yup.string()
@@ -43,17 +45,21 @@ const dispatch = useDispatch();
     },
     validationSchema,
     onSubmit: async (values, actions) => {
+      setLoading(true)
       const user = await loginUser(
         values.email,
         values.password
       )
       if(typeof user === "string"){
+        setLoading(false)
         setErrorMsg(`*${user}`)
         actions.resetForm();
         return;
       } else {
+        setLoading(false)
         dispatch(setCurrentUser({
-          ...user.user
+          ...user.user, 
+          token: user.token
         }))
         actions.resetForm();
         setErrorMsg(null)
@@ -84,7 +90,7 @@ const dispatch = useDispatch();
           </LoginContainInput>
         ))}
 
-        <LoginBtn value="Ingresá" type="submit" />
+        <button type="submit" disabled={loading}>{!loading? 'Ingresar' : <LoadIcon/>}</button>
         <p>
           ¿No tienes una cuenta? <Link to="/register">Registrate</Link>
         </p>

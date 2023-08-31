@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios'
 import { BASE_URL } from "../utils/constants";
 
 export const createUser = async(name, lastname, email, password, headerKey)=>{

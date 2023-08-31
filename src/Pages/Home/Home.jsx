@@ -14,7 +14,7 @@ import {
 import { useEffect, useRef } from "react";
 import Hero from "../../components/Hero/Hero";
 import HeadProductsCategorie from "../../components/HeadProductsCategorie/HeadProductsCategorie";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import HeadProductsGenre from "../../components/HeadProductsGenre/HeadProductsGenre";
 import CardsProducts from "../../components/CardsProducts/CardsProducts";
 import About from "../../components/About/About";
@@ -23,6 +23,7 @@ import { useLocation } from "react-router-dom";
 
 const Home = () => {
   const location = useLocation();
+  const {currentUser} = useSelector(state=> state.user)
 
   useEffect(() => {
     document.title = "Inicio";
@@ -41,9 +42,6 @@ const Home = () => {
     handleScrollToSection();
   }, [location]);
 
-  const dispatch = useDispatch();
-  const categories = useSelector((state) => state.categories.categories);
-
   const productsRef = useRef(null);
   const categoriesRef = useRef(null);
   const genreRef = useRef(null);
@@ -54,7 +52,7 @@ const Home = () => {
   const scrollGen = () => genreRef.current.scrollIntoView();
 
   return (
-    <MainContainer ref={homeRef} id="hero">
+    <MainContainer ref={homeRef} id="hero" mt={currentUser}>
       {/* Hero Imgs Slider */}
       <Hero
         doScroll={doScroll}

@@ -7,8 +7,8 @@ import {
 } from "./SuccessStyles";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 import DingDong from "../../audio/dingdong.mp3";
+import { useSelector } from "react-redux";
 
 const Success = () => {
   useEffect(() => {
@@ -18,7 +18,7 @@ const Success = () => {
     successRef.current.scrollIntoView();
   }, []);
 
-  const orderID = useSelector((state) => state.orders.orderID);
+  const {currentOrderID} = useSelector(state=> state.orders)
   const successRef = useRef();
 
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ const Success = () => {
 
       <SuccesOrder>
         <h3>Nro de Orden: </h3>
-        <span>#{orderID}</span>
+        <span>#{currentOrderID}</span>
       </SuccesOrder>
 
       <SuccessBtns>

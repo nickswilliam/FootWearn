@@ -94,6 +94,7 @@ export const ModalUserTitle = styled.h2`
   padding: 5px;
   color: var(--orange);
   font-size: 22px;
+  text-align: center;
 `;
 
 export const ModalDivAnchor = styled.div`

@@ -5,7 +5,7 @@ import { ButtonTransparent } from "../UI/UIStyles";
 
 export const HeaderContainer = styled.header`
     background-color: var(--white-menus);
-    z-index: 3;
+    z-index: 4;
     width: 100%;
     height: 80px;
     padding: 20px 30px;

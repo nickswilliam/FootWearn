@@ -12,6 +12,7 @@ import {
 } from "../../../redux/user/userSlice";
 import {FaShopify, FaUserAlt} from "react-icons/fa";
 import {AiOutlineLogout} from 'react-icons/ai'
+import { setOrders } from "../../../redux/ordersSlice/ordersSlice";
 
 const ModalUser = ({ toggleMenu, setToggleMenu }) => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const ModalUser = ({ toggleMenu, setToggleMenu }) => {
       <ModalUserContainer
         className={!hiddenMenu ? "openedModal" : "closedModal"}
       >
-        <ModalUserTitle>Bienvenida/o: {currentUser?.name} <FaUserAlt size='16px'/> </ModalUserTitle>
+        <ModalUserTitle>Bienvenid@: {currentUser?.name} <FaUserAlt size='16px'/> </ModalUserTitle>
         <ModalDivAnchor>
           <Link to="/orders"><FaShopify/> Mis Ordenes</Link>
           <ModalAnchors
@@ -31,6 +32,7 @@ const ModalUser = ({ toggleMenu, setToggleMenu }) => {
               setToggleMenu(!toggleMenu);
               dispatch(toggleHiddenMenu());
               dispatch(setCurrentUser(null));
+              dispatch(setOrders(null))
               navigate("/");
             }}
           >

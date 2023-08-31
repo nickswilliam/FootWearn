@@ -10,20 +10,17 @@ import { selectOrder } from "../../redux/ordersSlice/ordersSlice";
 
 const OrdersCardResume = ({
   cartItems,
-  shippingCost,
   date,
   orderID,
   setToggleDetail,
   toggleDetail,
+  total,
 }) => {
 
   const dispatch = useDispatch()
-  const subTotalPrice = cartItems.reduce(
-    (acc, item) => (acc += item.price * item.quantity),
-    0
-  );
+  
 
-  const totalItems = cartItems.reduce((acc, item) => (acc += item.quantity), 0);
+  const totalItems = cartItems.reduce((acc, item) => (acc += item.quantity ), 0);
 
   const fecha = new Date(date);
   const indexOfMonth = fecha.getMonth();
@@ -48,7 +45,7 @@ const OrdersCardResume = ({
       <LeftContainer>
         <h2>Pedido: #{orderID}</h2>
         <p>Total de articulos: {totalItems}</p>
-        <span>${subTotalPrice + shippingCost}</span>
+        <span>${total}</span>
       </LeftContainer>
 
       <RightContainer>

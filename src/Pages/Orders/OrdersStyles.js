@@ -6,7 +6,6 @@ export const OrderBGContainer = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
-  margin-top: 80px;
   height: auto;
   min-height: 700px;
   display: flex;
