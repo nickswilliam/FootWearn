@@ -1,4 +1,4 @@
-import { Autoplay, Pagination, Scrollbar, Navigation, A11y } from "swiper";
+import { Autoplay, Pagination, Scrollbar, Navigation } from "swiper/modules";
 import { heroImgs } from "./heroSliderImgs";
 import {
   SliderHeroContainer,
@@ -31,7 +31,7 @@ const SliderImgs = ({ doScroll, scrollGen, scrollCat }) => {
   return (
     <SliderHeroContainer>
       <SwiperContainer
-        modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+        modules={[Navigation, Pagination, Scrollbar, Autoplay]}
         loop={true}
         spaceBetween={0}
         slidesPerView={1}
