@@ -10,7 +10,7 @@ const UserLogged = () => {
     currentUser && (
       <UserLoggedContainer>
         <span>{`Bienvenid@ al E-Shop ${currentUser.name} ${currentUser.lastname}`}</span>
-        {!currentUser.verified ? <button onClick={()=> navigate('/verify')}>Verificar cuenta</button> : <FaCheckCircle/>}
+        {!currentUser.verified ? <button onClick={()=> navigate('/verify')}>Verificar cuenta</button> : <FaCheckCircle style={{cursor: "pointer"}} title="Usuario verificado"/>}
       </UserLoggedContainer>
     )
   );

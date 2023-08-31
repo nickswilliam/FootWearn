@@ -51,6 +51,7 @@ const MenuSection = ({ toggleSection, handleMenu }) => (
 );
 
 const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
+  const {cartMenu} = useSelector((state)=> state.cart)
   const { currentUser, hiddenMenu } = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const [toggleSection, setToggleSection] = useState(false);
@@ -79,7 +80,7 @@ const NavBar = ({ toggleMenu, setToggleMenu, toggleSearchMenu }) => {
     if (toggleSection) {
       setToggleSection(!toggleSection);
     }
-  }, [pathname, toggleSearchMenu, toggleSection]);
+  }, [pathname, toggleSearchMenu, !cartMenu]);
 
   const handleMenu = () => {
     setToggleMenu(!toggleMenu);

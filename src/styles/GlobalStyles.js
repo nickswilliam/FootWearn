@@ -81,7 +81,7 @@ export const GlobalStyles = createGlobalStyle`
 
     html{
         scroll-behavior: smooth;
-        scroll-padding-top: 80px;
+        scroll-padding-top: 95px;
     }
 
     body{

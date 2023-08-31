@@ -6,7 +6,7 @@ export const Navbar = styled.nav`
   justify-content: center;
   align-items: center;
   padding: 10px 15px;
-  height: auto;
+  height: 80px;
   transition: all ease 0.2s;
   width: 100%;
 

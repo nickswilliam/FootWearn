@@ -85,7 +85,8 @@ const Register = () => {
         return;
       } else {
         dispatch(setCurrentUser({
-          ...user.user
+          ...user.user,
+          token: user.token
         }));  
         setToggleRegister(false);        
         actions.resetForm();

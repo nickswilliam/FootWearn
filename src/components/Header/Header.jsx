@@ -107,7 +107,7 @@ const Header = () => {
 
         <ToggleMenuBtn
           className="menu_toggle"
-          onClick={() => setToggleMenu(!toggleMenu)}
+          onClick={(e) => setToggleMenu(!toggleMenu)}
         >
           <FaBars size="25px" pointerEvents="none" />
         </ToggleMenuBtn>
