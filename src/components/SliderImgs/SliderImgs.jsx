@@ -1,4 +1,4 @@
-import { Autoplay, Pagination, Scrollbar, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Scrollbar, Navigation } from 'swiper';
 import { heroImgs } from "./heroSliderImgs";
 import {
   SliderHeroContainer,
