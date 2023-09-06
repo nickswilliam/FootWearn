@@ -8,6 +8,7 @@ import Orders from "../Pages/Orders/Orders";
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 import NotFound from "../Pages/NotFound/NotFound";
 import Verify from "../Pages/Verify/Verify";
+import Issues from "../Pages/Issues/Issues";
 const Routes = () => {
   return (
     <RoutesReact>
@@ -48,6 +49,15 @@ const Routes = () => {
         }
       />
       <Route path="*" element={<NotFound />} />
+
+      <Route
+        path="/issues"
+        element={
+          <ProtectedRoute redirectTo="/login">
+            <Issues />
+          </ProtectedRoute>
+        }
+      />
     </RoutesReact>
   );
 };

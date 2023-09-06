@@ -3,19 +3,24 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import { useEffect, useRef, useState } from "react";
 import { verifyUser } from "../../axios/axiosUser";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setVerified } from "../../redux/user/userSlice";
 import { InputsVerify } from "./VerifyStyles";
 import { LoadIcon } from "../Checkout/CheckoutStyles";
 import { useNavigate } from "react-router-dom";
+import { toggleCartMenu } from "../../redux/cartSlice/cartSice";
 
 const Verify = () => {
   const verifyRef = useRef();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const {cartMenu} = useSelector(state=> state.cart)
   useEffect(() => {
     document.title = "Verificar cuenta";
     verifyRef.current.scrollIntoView();
+    if(cartMenu){
+      dispatch(toggleCartMenu())
+    }
   }, []);
 
   const [loading, setLoading] = useState(false);
