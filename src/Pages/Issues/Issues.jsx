@@ -3,16 +3,19 @@ import { ADMIN } from "../../utils/constants";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useFormik } from "formik";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { LoadIcon } from "../Checkout/CheckoutStyles";
 import { createIssue } from "../../axios/axiosIssue";
+import { IssuesContainer, IssueContainer, Inputcontainer } from "./IssuesStyles";
 
 const Issues = () => {
   const { currentUser } = useSelector((state) => state.user);
   const navigate = useNavigate();
+  const issuesRef = useRef()
 
   useEffect(() => {
     document.title = "Crear reportes";
+    issuesRef.current.scrollIntoView();
   }, []);
 
   const [loading, setLoading] = useState(false);
@@ -33,6 +36,7 @@ const Issues = () => {
     validationSchema,
     onSubmit: async (values, actions) => {
       setLoading(!loading);
+      setMsg(null)
       const issue = await createIssue(values.title, values.description, values.priority, currentUser)
 
       if(typeof issue === 'string'){
@@ -49,25 +53,25 @@ const Issues = () => {
   });
   return (
     currentUser && (
-      <div>
+      <IssuesContainer ref={issuesRef}>
         {currentUser.rol !== ADMIN ? (
-          <div>
-            <p>No contas con los permisos necesarios para esta sección.</p>
+          <IssueContainer>
+            <h1>No contas con los permisos necesarios para esta sección.</h1>
             <button onClick={() => navigate("/")}>Volver a Inicio</button>
-          </div>
+          </IssueContainer>
         ) : currentUser.rol === ADMIN && !currentUser.verified ? (
-          <div>
-            <p>Debes verificar la cuenta primero, para generar un reporte</p>
+          <IssueContainer>
+            <h1>Debes verificar la cuenta primero para generar un reporte</h1>
             <button onClick={() => navigate("/verify")}>
               Verificar cuenta
             </button>
-          </div>
+          </IssueContainer>
         ) : (
-          <div>
+          <IssueContainer>
             <h1>Crear reporte:</h1>
             <h2>{msg}</h2>
             <form onSubmit={formik.handleSubmit}>
-              <div>
+              <Inputcontainer>
                 <label htmlFor="title">Titulo:</label>
                 <input
                   type="text"
@@ -78,10 +82,10 @@ const Issues = () => {
                 {formik.touched["title"] && formik.errors["title"] ? (
                   <p>{formik.errors["title"]}</p>
                 ) : null}
-              </div>
+              </Inputcontainer>
 
 
-              <div>
+              <Inputcontainer>
                 <label htmlFor="description">Descripción:</label>
                 <input
                   type="text"
@@ -92,10 +96,10 @@ const Issues = () => {
                 {formik.touched["description"] && formik.errors["description"] ? (
                   <p>{formik.errors["description"]}</p>
                 ) : null}
-              </div>
+              </Inputcontainer>
 
 
-              <div>
+              <Inputcontainer>
                 <label htmlFor="priority">Prioridad:</label>
                 <input
                   type="number"
@@ -106,13 +110,13 @@ const Issues = () => {
                 {formik.touched["priority"] && formik.errors["priority"] ? (
                   <p>{formik.errors["priority"]}</p>
                 ) : null}
-              </div>
+              </Inputcontainer>
 
               <button type="submit">{!loading? 'Reportar errores' : <LoadIcon/>}</button>
             </form>
-          </div>
+          </IssueContainer>
         )}
-      </div>
+      </IssuesContainer>
     )
   );
 };
