@@ -77,5 +77,5 @@ export const BtnAddToCart = styled.button = styled.button`
 `
 
 export const SelectStyled = styled(Select)`
-  
+  z-index: 2;
 `

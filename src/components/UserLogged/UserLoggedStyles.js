@@ -11,7 +11,7 @@ export const UserLoggedContainer = styled.div`
     background-color: var(--grey-light);
     position: sticky;
     top: 80px;
-    z-index: 2;
+    z-index: 3;
     gap: 20px;
 
     span{
