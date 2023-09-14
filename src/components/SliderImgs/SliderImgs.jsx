@@ -4,8 +4,8 @@ import {
   SliderHeroContainer,
   SliderImg,
   SwiperContainer,
-  SwiperSlideContainer,
 } from "./SliderImgsStyles";
+import { SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/bundle";
 import "swiper/css/navigation";
@@ -49,15 +49,16 @@ const SliderImgs = ({ doScroll, scrollGen, scrollCat }) => {
         }}
       >
         {heroImgs.map((slide) => (
-          <SwiperSlideContainer
+          <SwiperSlide
             key={slide.id}
             style={{
               cursor: `${slide.cursor ? "pointer" : "default"}`,
+              boxShadow: '0px 10px 10px var(--shadows)'
             }}
             onClick={() => slideToStore(slide.category)}
           >
             <SliderImg src={slide.img} alt={slide.name} title={slide.title} />
-          </SwiperSlideContainer>
+          </SwiperSlide>
         ))}
       </SwiperContainer>
     </SliderHeroContainer>
